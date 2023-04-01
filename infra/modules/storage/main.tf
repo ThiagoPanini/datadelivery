@@ -47,11 +47,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
 
 # Adicionando arquivos locais como tabelas
 resource "aws_s3_object" "data_sources" {
-  for_each = var.flag_upload_data_files ? fileset(var.local_data_path, "**") : []
-  bucket   = aws_s3_bucket.this["sor"].bucket
-  key      = each.value
-  source   = "${var.local_data_path}${each.value}"
-  #etag                   = filemd5("${var.local_data_path}${each.value}")
+  for_each               = fileset(var.local_data_path, "**")
+  bucket                 = aws_s3_bucket.this["sor"].bucket
+  key                    = each.value
+  source                 = "${var.local_data_path}${each.value}"
   server_side_encryption = "aws:kms"
 }
 

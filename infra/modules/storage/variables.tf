@@ -11,21 +11,16 @@ armazenamento dos dados e insumos no s3
 -------------------------------------------------- */
 
 variable "bucket_names_map" {
-  description = "Map contendo chaves e nomes de todos os buckets a serem criados no projeto"
+  description = "Map with keys containing the name of all buckets to be created in this module"
   type        = map(string)
 }
 
 variable "local_data_path" {
-  description = "Caminho local de armazenamento dos arquivos a serem inseridos no bucket s3"
+  description = "Local path where files to be uplaoded are stored"
   type        = string
 }
 
-variable "flag_upload_data_files" {
-  description = "Flag para realização do upload de bases de dados"
-  type        = bool
-}
-
 variable "flag_s3_block_public_access" {
-  description = "Flag para configuração de bloqueio de acesso público de buckets criados"
+  description = "Flag for blocking all public access for buckets created in this project"
   type        = bool
 }
