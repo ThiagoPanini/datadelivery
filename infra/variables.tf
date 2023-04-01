@@ -31,3 +31,13 @@ variable "flag_s3_block_public_access" {
   type        = bool
   default     = true
 }
+
+/* --------------------------------------------------------
+---------------- VARIABLES: catalog module ----------------
+-------------------------------------------------------- */
+
+variable "glue_databases_name" {
+  description = "Database name for storing Glue catalog tables"
+  type        = list(string)
+  default     = ["db_terracatalog_sor", "db_terracatalog_sot", "db_terracatalog_spec"]
+}

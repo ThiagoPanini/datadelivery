@@ -48,3 +48,21 @@ module "storage" {
   local_data_path             = var.local_data_path
   flag_s3_block_public_access = var.flag_s3_block_public_access
 }
+
+
+/* --------------------------------------------------------
+---------------- TERRAFORM MODULE: catalog ----------------
+      Preparing the Data Catalog with local datasets
+-------------------------------------------------------- */
+
+# Calling the module
+module "catalog" {
+  source = "./modules/catalog"
+
+  glue_databases_name    = var.glue_databases_name
+  athena_output_location = "s3://${module.storage.bucket_name_athena}"
+
+  depends_on = [
+    module.storage
+  ]
+}
