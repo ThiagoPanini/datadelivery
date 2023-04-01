@@ -23,7 +23,7 @@ variable "aws_provider_config" {
 variable "local_data_path" {
   description = "Local path where files to be uplaoded are stored"
   type        = string
-  default     = "../data/"
+  default     = "./data/"
 }
 
 variable "flag_s3_block_public_access" {
@@ -32,12 +32,24 @@ variable "flag_s3_block_public_access" {
   default     = true
 }
 
+variable "datasets_to_upload" {
+  description = "Map for managing which datasets will be uploaded to S3"
+  type        = map(bool)
+  default = {
+    "bike_data"         = true
+    "br_ecommerce"      = true
+    "tbl_activity_data" = true
+    "tbl_airbnb"        = true
+    "tbl_iot_devices"   = true
+  }
+}
+
 /* --------------------------------------------------------
 ---------------- VARIABLES: catalog module ----------------
 -------------------------------------------------------- */
 
 variable "glue_databases_name" {
-  description = "Database name for storing Glue catalog tables"
+  description = "List of database names for storing Glue catalog tables"
   type        = list(string)
   default     = ["db_terracatalog_sor", "db_terracatalog_sot", "db_terracatalog_spec"]
 }
