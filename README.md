@@ -37,3 +37,9 @@ ___
 **AWS Glue**
 
 - [Glue Crawler Prerequisites](https://docs.aws.amazon.com/glue/latest/dg/crawler-prereqs.html)
+
+**Terraform**
+
+- [Creating Modules](https://developer.hashicorp.com/terraform/language/modules/develop)
+- [Using Modules](https://developer.hashicorp.com/terraform/language/modules)
+- [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
