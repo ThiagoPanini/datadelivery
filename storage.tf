@@ -39,9 +39,9 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
 
 # Adding local files on SoR bucket
 resource "aws_s3_object" "data_sources" {
-  for_each               = fileset(var.local_data_path, "**")
+  for_each               = fileset(local.data_path, "**")
   bucket                 = aws_s3_bucket.this["sor"].bucket
   key                    = each.value
-  source                 = "${var.local_data_path}${each.value}"
+  source                 = "${local.data_path}${each.value}"
   server_side_encryption = "aws:kms"
 }

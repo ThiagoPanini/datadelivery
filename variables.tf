@@ -20,12 +20,6 @@ variable "aws_provider_config" {
 ---------------- VARIABLES: storage module ----------------
 -------------------------------------------------------- */
 
-variable "local_data_path" {
-  description = "Local path where files to be uplaoded are stored"
-  type        = string
-  default     = "./data/"
-}
-
 variable "flag_s3_block_public_access" {
   description = "Flag for blocking all public access for buckets created in this project"
   type        = bool
@@ -47,12 +41,6 @@ variable "datasets_to_upload" {
 /* --------------------------------------------------------
 ---------------- VARIABLES: iam module ----------------
 -------------------------------------------------------- */
-
-variable "iam_policies_path" {
-  description = "Filepath based on root module where JSON files for IAM policies are stored"
-  type        = string
-  default     = "./policy"
-}
 
 variable "iam_glue_crawler_role_name" {
   description = "Role name for Glue Crawler IAM role"

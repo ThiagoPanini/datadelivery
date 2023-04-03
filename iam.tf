@@ -21,9 +21,9 @@ data "aws_iam_policy_document" "glue_trust" {
 
 # Creating IAM policies using JSON files in the module
 resource "aws_iam_policy" "glue_policies" {
-  for_each = fileset(var.iam_policies_path, "**")
+  for_each = fileset(local.iam_policies_path, "**")
   name     = split(".", each.value)[0]
-  policy   = file("${var.iam_policies_path}/${each.value}")
+  policy   = file("${local.iam_policies_path}/${each.value}")
 }
 
 # Creating role for Glue Crawler

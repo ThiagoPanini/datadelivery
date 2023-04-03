@@ -25,6 +25,12 @@ locals {
     "glue"   = "terracatalog-glue-assets-${local.account_id}-${local.region_name}"
   }
 
+  # Referencing a data folder where the files to be uploaded are located
+  data_path = "${path.module}/data/"
+
+  # Referencing a policies folder where the JSON files for policies are located
+  iam_policies_path = "${path.module}/policy/"
+
   # Extracting current timestamp and adding a delay
   timestamp_to_run = timeadd(timestamp(), var.delay_to_run_crawler)
 
