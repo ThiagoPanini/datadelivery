@@ -15,7 +15,7 @@ data "aws_kms_key" "s3" {
 
 # Creating Glue databases on Data Catalog
 resource "aws_glue_catalog_database" "mesh" {
-  for_each    = var.glue_databases_name
+  for_each    = var.glue_db_names
   name        = each.value
   description = "Database ${each.value} for storing tables in this specific layer"
 }
@@ -39,7 +39,7 @@ resource "aws_athena_workgroup" "analytics" {
 
 # Defining a Glue Crawler
 resource "aws_glue_crawler" "sor" {
-  database_name = var.glue_databases_name["sor"]
+  database_name = var.glue_db_names["sor"]
   name          = "terracatalog-glue-crawler-sor"
   role          = aws_iam_role.glue_crawler_role.arn
 

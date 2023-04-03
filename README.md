@@ -40,7 +40,8 @@ ___
 
 **Terraform**
 
-- [Creating Modules](https://developer.hashicorp.com/terraform/language/modules/develop)
-- [Using Modules](https://developer.hashicorp.com/terraform/language/modules)
-- [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+- [Terraform - Creating Modules](https://developer.hashicorp.com/terraform/language/modules/develop)
+- [Terraform - Using Modules](https://developer.hashicorp.com/terraform/language/modules)
+- [Terraform - Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 - [Medium - Maintaining Reusable Terraform Modules](https://arunksingh16.medium.com/maintaining-reusable-terraform-modules-in-github-d0440753e784)
+- [Terraform - Filesystem and Workspace Info](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)

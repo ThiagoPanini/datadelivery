@@ -53,7 +53,7 @@ variable "iam_glue_crawler_role_name" {
 ---------------- VARIABLES: catalog module ----------------
 -------------------------------------------------------- */
 
-variable "glue_databases_name" {
+variable "glue_db_names" {
   description = "List of database names for storing Glue catalog tables"
   type        = map(string)
   default = {
