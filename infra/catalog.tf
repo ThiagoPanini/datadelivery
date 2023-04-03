@@ -46,4 +46,11 @@ resource "aws_glue_crawler" "sor" {
   s3_target {
     path = "s3://${local.bucket_names_map["sor"]}"
   }
+
+  schedule = local.crawler_cron_expr
+
+  depends_on = [
+    aws_iam_policy.glue_policies,
+    aws_iam_role.glue_crawler_role
+  ]
 }
