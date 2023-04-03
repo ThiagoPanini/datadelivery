@@ -1,10 +1,10 @@
 # Project main info
-site_name: terraglue
-site_url: https://github.com/ThiagoPanini/terraglue
+site_name: terracatalog
+site_url: https://github.com/ThiagoPanini/terracatalog
 site_author: Thiago Panini
 site_description: >-
-  A pocket AWS infrastructure environment for helping people to
-  learn more about Glue
+  A pocket AWS infrastructure with everything its needed to start exploring
+  analytics services
 
 # Source repo info
 repo_name: ThiagoPanini/terraglue
@@ -36,14 +36,14 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Clique para alterar para modo noturno
+        name: Click to change for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep purple
       accent: deep purple
       toggle:
         icon: material/weather-night
-        name: Clique para alterar para modo claro
+        name: Click to change for light mode
 
   # Setting up template features
   features:
@@ -63,13 +63,8 @@ theme:
 nav:
   - Home:
     - Home: index.md
-    - Project Story: story.md
   - Quickstart:
-    - Basic Tutorial: quickstart/basic-tutorial.md
-    - Detailed Tutorial: quickstart/detailed-tutorial.md
-  - Architecture:
-    - Project Architecture: architecture/project-architecture.md
-  - FAQ: faq/faq.md
+    - Getting Started: quickstart/gettingstarted.md
 
 # Setting up MkDocs extensions
 markdown_extensions:

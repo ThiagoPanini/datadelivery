@@ -1,14 +1,14 @@
-# Terraglue: A Poweful Tool for Learning Glue
+# Terracatalog: Helping users to start their analytics journey at AWS
 
 ## Overview
 
-The *terraglue* project was created for helping people to improve their learning journey on AWS Glue service. It accomplishes that by enabling a pocket environment with all necessary componentes to start developing jobs, including S3 buckets, sample data on Data Catalog, IAM roles and policies, a pre configured Athena workgroup and finally an end to end Glue job example that reads, transform and catalog new data.
+The *terracatalog* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
 
-- Have you ever wanted to learn Glue but you got stuck on a complex environment set up?
-- Have you ever wanted to test an idea for an ETL in a pocket and disposable environment?
-- Have you ever wanted to go the next level on developing Glue jobs?
+- Have you ever wanted to have a bunch of datasets to explore in AWS?
+- Have you ever wanted to take public data and start building an ETL process?
+- Have you ever wanted to go deep into the Data Mesh architecture with SoR, SoT and Spec layers?
 
-:waning_gibbous_moon: Try *terraglue*!
+🌘 Try *terracatalog*!
 
 
 <div align="center">
@@ -16,25 +16,21 @@ The *terraglue* project was created for helping people to improve their learning
 </div>
 
 <div align="center">
-    <i>terraglue<br>
+    <i>terracatalog<br>
     AWS Pocket Infrastructure</i>
 </div>
 
 <div align="center">  
   <br>
 
-  <img src="https://img.shields.io/github/v/release/ThiagoPanini/terraglue?color=purple" alt="Shield github release version">
+  <img src="https://img.shields.io/github/v/release/ThiagoPanini/terracatalog?color=purple" alt="Shield github release version">
   
-  <img src="https://img.shields.io/github/last-commit/ThiagoPanini/terraglue?color=purple" alt="Shield github last commit">
+  <img src="https://img.shields.io/github/last-commit/ThiagoPanini/terracatalog?color=purple" alt="Shield github last commit">
   
-  <img src="https://img.shields.io/github/actions/workflow/status/ThiagoPanini/terraglue/ci-main.yml?label=ci" alt="Shield github CI workflow">
+  <img src="https://img.shields.io/github/actions/workflow/status/ThiagoPanini/terracatalog/ci-main.yml?label=ci" alt="Shield github CI workflow">
 
-  <a href='https://terraglue.readthedocs.io/pt/latest/?badge=latest'>
-    <img src='https://readthedocs.org/projects/terraglue/badge/?version=latest' alt='Documentation Status' />
-  </a>
-
-  <a href="https://codecov.io/gh/ThiagoPanini/terraglue" > 
-    <img src="https://codecov.io/github/ThiagoPanini/terraglue/branch/main/graph/badge.svg?token=7HI1YGS4AA"/> 
+  <a href='https://terracatalog.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/terracatalog/badge/?version=latest' alt='Documentation Status' />
   </a>
 
 </div>
@@ -43,18 +39,17 @@ ___
 
 ## Features
 
-- 🚀 Have a pocket and disposable AWS environment with all infrastructure needed to start developing Glue jobs
-- 🤖 No need to to worry about bucket creation, IAM roles and policies definition or even uploading datasets in your AWS account
-- 📊 Possibility to run queries on different public datasets written and catalogged for users to improve their analytics skills
-- 🛠️ Usage of Terraform as IaC tool for providing a consistent infrastructure
+- 🚀 A pocket and disposable AWS environment
+- 🪣 Automatic creation of S3 buckets using the SoR, SoT and Spec storage layers approach
+- 🤖 Automatic data cataloging process using a scheduled Glue Crawler
+- 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
-ter
+
 
 ## Read the Docs
 
-- Take a look at the [Project Story](./story.md) page for knowing more about how *terraglue* was madew
-- Checkout the [Quickstart](./quickstart/basic-tutorial.md) page for a step by step guide on how to start using *terraglue*
-- At the [Architecture](./architecture/project-architecture.md) page you will see details for all AWS services provided
+- Checkout the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *terracatalog*
+- At the [Architecture](./architecture/project-architecture.md) page you will see details for all AWS infrastructure provided
 - Still have doubts? Check the [FAQ](./faq/faq.md) page!
     
 
