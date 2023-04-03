@@ -8,25 +8,6 @@ actions are based on:
   - Uploading datasets based on its repository location
 -------------------------------------------------------- */
 
-# Defining data sources to help local variables
-data "aws_region" "current" {}
-data "aws_caller_identity" "current" {}
-
-# Defining local variables to be used on the module
-locals {
-  account_id  = data.aws_caller_identity.current.account_id
-  region_name = data.aws_region.current.name
-
-  # Here it's possible to set all bucket names to be created
-  bucket_names_map = {
-    "sor"    = "terracatalog-sor-data-${local.account_id}-${local.region_name}"
-    "sot"    = "terracatalog-sot-data-${local.account_id}-${local.region_name}"
-    "spec"   = "terracatalog-spec-data-${local.account_id}-${local.region_name}"
-    "athena" = "terracatalog-athena-query-results-${local.account_id}-${local.region_name}"
-    "glue"   = "terracatalog-glue-assets-${local.account_id}-${local.region_name}"
-  }
-}
-
 # Creating all s3 buckets
 resource "aws_s3_bucket" "this" {
   for_each      = local.bucket_names_map

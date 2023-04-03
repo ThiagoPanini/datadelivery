@@ -14,8 +14,8 @@ data "aws_kms_key" "s3" {
 }
 
 # Creating Glue databases on Data Catalog
-resource "aws_glue_catalog_database" "databases" {
-  for_each    = toset(var.glue_databases_name)
+resource "aws_glue_catalog_database" "mesh" {
+  for_each    = var.glue_databases_name
   name        = each.value
   description = "Database ${each.value} for storing tables in this specific layer"
 }
@@ -27,12 +27,23 @@ resource "aws_athena_workgroup" "analytics" {
 
   configuration {
     result_configuration {
-      output_location = aws_s3_bucket.this["athena"].bucket
+      output_location = "s3://${local.bucket_names_map["athena"]}"
 
       encryption_configuration {
         encryption_option = "SSE_KMS"
         kms_key_arn       = data.aws_kms_key.s3.arn
       }
     }
+  }
+}
+
+# Defining a Glue Crawler
+resource "aws_glue_crawler" "sor" {
+  database_name = var.glue_databases_name["sor"]
+  name          = "terracatalog-glue-crawler-sor"
+  role          = aws_iam_role.glue_crawler_role.arn
+
+  s3_target {
+    path = "s3://${local.bucket_names_map["sor"]}"
   }
 }
