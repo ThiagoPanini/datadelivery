@@ -43,3 +43,4 @@ ___
 - [Creating Modules](https://developer.hashicorp.com/terraform/language/modules/develop)
 - [Using Modules](https://developer.hashicorp.com/terraform/language/modules)
 - [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+- [Medium - Maintaining Reusable Terraform Modules](https://arunksingh16.medium.com/maintaining-reusable-terraform-modules-in-github-d0440753e784)

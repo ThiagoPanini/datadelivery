@@ -23,7 +23,7 @@ variable "aws_provider_config" {
 variable "local_data_path" {
   description = "Local path where files to be uplaoded are stored"
   type        = string
-  default     = "../data/"
+  default     = "/data/"
 }
 
 variable "flag_s3_block_public_access" {
@@ -51,7 +51,7 @@ variable "datasets_to_upload" {
 variable "iam_policies_path" {
   description = "Filepath based on root module where JSON files for IAM policies are stored"
   type        = string
-  default     = "./policy"
+  default     = "/policy"
 }
 
 variable "iam_glue_crawler_role_name" {
