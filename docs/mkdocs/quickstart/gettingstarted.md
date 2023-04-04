@@ -42,18 +42,10 @@ Check out the demo gifs below to see this working in practice.
 
 
 ??? example "Calling the terracatalog module from GitHub"
-    Assuming that users have configured their AWS credentials (as part of the prerequisites section), now it's possible to call the *terracatalog* module from GitHub as a way to use all its features and its infrastructure provided.
+    The next step to have *terracatalog* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
 
     ![Demo for creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-02-module.gif?raw=true)
 
-    **Source code:**
-
-    ```json
-    # Calling terracatalog module
-    module "terracatalog" {
-      source = "git::https://github.com/ThiagoPanini/terracatalog"
-    }
-    ```
 
 ??? example "Initializing the module with terraform init"
 
