@@ -38,17 +38,28 @@ Check out the demo gifs below to see this working in practice.
 
     Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
 
-    ![Demo for creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-01-maintf.gif?raw=true)
+    ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-01-maintf.gif?raw=true)
 
 
 ??? example "Calling the terracatalog module from GitHub"
     The next step to have *terracatalog* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
 
-    ![Demo for creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-02-module.gif?raw=true)
+    ![Declaring the Terraform module block to call terracatalog source module from GitHub](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-02-module.gif?raw=true)
 
 
 ??? example "Initializing the module with terraform init"
+    So here we start the Terraform comands to deploy the *terracatalog* module infrastructure provided. The first one is the command used to initialize the module and install all files needed in the project.
+
+    ![Initializing the module with terraform init](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-03-init.gif?raw=true)
+
 
 ??? example "Planning the deploy with terraform deploy"
+    And now that the Terraform project has all components from *terracatalog* module installed, it's time to see the deployment plan through `terraform plan` command.
+
+    ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-04-plan.gif?raw=true)
+
 
 ??? example "Deploying infrastructure with terraform apply"
+    Finally, we can deploy the infrastructure using the `terraform apply` command. By executing this comand, the user will have all elements from *terracatlog* deployed in its AWS account.
+
+    ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-05-apply.gif?raw=true)
