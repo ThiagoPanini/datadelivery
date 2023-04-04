@@ -60,6 +60,40 @@ Check out the demo gifs below to see this working in practice.
 
 
 ??? example "Deploying infrastructure with terraform apply"
-    Finally, we can deploy the infrastructure using the `terraform apply` command. By executing this comand, the user will have all elements from *terracatlog* deployed in its AWS account.
+    Finally, we can deploy the infrastructure using the `terraform apply` command.
 
     ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-05-apply.gif?raw=true)
+
+And with the steps above, users will have all elements from *terracatalog* that will help them to improve their analytics skills using a preconfigured environment that offers a bunch of public datasets already cataloged in Data Catalog that can be used for many purposes.
+
+As said before, calling the *terracatalog* source module from GitHub is probably the best way to use its features. The demo videos considered the simplest use case ever possible where a brand new Terraform project was created just for using *terracatalog*, but the idea was to show that users can call *terracatalog* module in huge Terraform projects to fill their needs.
+
+:material-alert-decagram:{ .mdx-pulse .warning } By the other hand, users also can choose to clone the source GitHub repository by their own and run the Terraform commands to deploy the infrastructure. The main problem of this approach is that users won't have the latest *terracatalog* features until they pull new updates from the source repo. It means that users should always pay attention to new features and releases from the source repository.
+
+## Cloning the Source Repo (Optional)
+
+This approach considers the following steps to use *terracatalog* features in an AWS account:
+
+```bash
+# 1. Cloning the source repo via HTTPS
+git clone https://github.com/ThiagoPanini/terracatalog.git
+
+# 2. Navigating to the local repository
+cd terracatalog/
+
+# 3. Initializing Terraform modules
+terraform init
+
+# 4. Planning the deploy
+terraform plan
+
+# 5. Deploying infra
+terraform apply
+```
+
+???+ success "Do whatever you feel more comfortable to"
+    As much as I stated here that calling the *terracatalog* source GitHub module should be the best way to use its features, in truth the best way is that one you feel more comfortable.
+
+    If cloning the repo pleases you, feel free to do it.
+
+    What matters most is users exploring all the good features provided by *terracatalog*!
