@@ -14,14 +14,36 @@
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+- [Features](#features)
 - [Contacts](#contacts)
 - [References](#references)
 
 ___
 
 
+## Overview
+
+The *terracatalog* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
+
+- Have you ever wanted to have a bunch of datasets to explore in AWS?
+- Have you ever wanted to take public data and start building an ETL process?
+- Have you ever wanted to go deep into the Data Mesh architecture with SoR, SoT and Spec layers?
+
+🌘 Try *terracatalog*!
+
 > **Note**
->  Work in progress...
+>  Now the *terracatalog* project has an official documentation in readthedocs! Visit the [following link](https://terracatalog.readthedocs.io/en/latest/) and check out usability technical details, practical examples and more!
+
+___
+
+## Features
+
+- 🚀 A pocket and disposable AWS environment
+- 🪣 Automatic creation of S3 buckets using the SoR, SoT and Spec storage layers approach
+- 🤖 Automatic data cataloging process using a scheduled Glue Crawler
+- 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
+- 🔦 Destroy everything and recreate all again at a touch of a single command
 
 ___
 
