@@ -1,4 +1,4 @@
-# Getting Started with Terracatalog
+# Getting Started with terracatalog
 
 In order to start using *terracatalog* to deploy an AWS toolkit for explore public dasets using analytics services, users will need:
 
@@ -16,3 +16,34 @@ In order to start using *terracatalog* to deploy an AWS toolkit for explore publ
 
 ___
 
+## Calling terracatalog Module
+
+As stated in the official Terraform documentation:
+
+> A module is a container for multiple resources that are used together. You can use modules to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects.
+
+If you already have a Terraform project and you want to add *terracatalog* features to it, you can just call the module directly from [GitHub](https://github.com/ThiagoPanini/terracatalog) using the following sintax:
+
+```json
+# Calling terracatalog module with default configuration
+module "terracatalog" {
+  source = "git::https://github.com/ThiagoPanini/terracatalog"
+}
+```
+
+Check out the demo gifs below to see this working in practice.
+
+??? example "Creating a Terraform project"
+    There are different ways to use Terraform. In fact, different users can adopt different styles according to their own preferences. The [Terraform language documentation](https://developer.hashicorp.com/terraform/language) will always be a good friend to help users to find their own development style.
+
+    Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
+
+
+
+??? example "Calling the terracatalog module from GitHub"
+
+??? example "Initializing the module with terraform init"
+
+??? example "Planning the deploy with terraform deploy"
+
+??? example "Deploying infrastructure with terraform apply"
