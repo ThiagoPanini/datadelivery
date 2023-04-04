@@ -12,7 +12,7 @@ The *terracatalog* project is an open source solution that provides a starter to
 
 
 <div align="center">
-    <br><img src="https://github.com/ThiagoPanini/terraglue/blob/feature/terraglue-refactor/docs/assets/imgs/logo.png?raw=true" alt="terraglue-logo" width=200 height=200>
+    <br><img src="https://github.com/ThiagoPanini/terracatalog/blob/main/docs/assets/imgs/logo.png?raw=true" alt="terraglue-logo" width=200 height=200>
 </div>
 
 <div align="center">
@@ -27,7 +27,7 @@ The *terracatalog* project is an open source solution that provides a starter to
   
   <img src="https://img.shields.io/github/last-commit/ThiagoPanini/terracatalog?color=purple" alt="Shield github last commit">
   
-  <img src="https://img.shields.io/github/actions/workflow/status/ThiagoPanini/terracatalog/ci-main.yml?label=ci" alt="Shield github CI workflow">
+  <img src="https://img.shields.io/github/actions/workflow/status/ThiagoPanini/terracatalog/ci-feature.yml?label=ci" alt="Shield github CI workflow">
 
   <a href='https://terracatalog.readthedocs.io/en/latest/?badge=latest'>
     <img src='https://readthedocs.org/projects/terracatalog/badge/?version=latest' alt='Documentation Status' />

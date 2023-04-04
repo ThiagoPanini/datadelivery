@@ -38,25 +38,62 @@ Check out the demo gifs below to see this working in practice.
 
     Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
 
-    ![Demo for creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-01-maintf.gif?raw=true)
+    ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-01-maintf.gif?raw=true)
 
 
 ??? example "Calling the terracatalog module from GitHub"
-    Assuming that users have configured their AWS credentials (as part of the prerequisites section), now it's possible to call the *terracatalog* module from GitHub as a way to use all its features and its infrastructure provided.
+    The next step to have *terracatalog* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
 
-    ![Demo for creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-02-module.gif?raw=true)
+    ![Declaring the Terraform module block to call terracatalog source module from GitHub](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-02-module.gif?raw=true)
 
-    **Source code:**
-
-    ```json
-    # Calling terracatalog module
-    module "terracatalog" {
-      source = "git::https://github.com/ThiagoPanini/terracatalog"
-    }
-    ```
 
 ??? example "Initializing the module with terraform init"
+    So here we start the Terraform comands to deploy the *terracatalog* module infrastructure provided. The first one is the command used to initialize the module and install all files needed in the project.
+
+    ![Initializing the module with terraform init](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-03-init.gif?raw=true)
+
 
 ??? example "Planning the deploy with terraform deploy"
+    And now that the Terraform project has all components from *terracatalog* module installed, it's time to see the deployment plan through `terraform plan` command.
+
+    ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-04-plan.gif?raw=true)
+
 
 ??? example "Deploying infrastructure with terraform apply"
+    Finally, we can deploy the infrastructure using the `terraform apply` command.
+
+    ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-05-apply.gif?raw=true)
+
+And with the steps above, users will have all elements from *terracatalog* that will help them to improve their analytics skills using a preconfigured environment that offers a bunch of public datasets already cataloged in Data Catalog that can be used for many purposes.
+
+As said before, calling the *terracatalog* source module from GitHub is probably the best way to use its features. The demo videos considered the simplest use case ever possible where a brand new Terraform project was created just for using *terracatalog*, but the idea was to show that users can call *terracatalog* module in huge Terraform projects to fill their needs.
+
+:material-alert-decagram:{ .mdx-pulse .warning } By the other hand, users also can choose to clone the source GitHub repository by their own and run the Terraform commands to deploy the infrastructure. The main problem of this approach is that users won't have the latest *terracatalog* features until they pull new updates from the source repo. It means that users should always pay attention to new features and releases from the source repository.
+
+## Cloning the Source Repo (Optional)
+
+This approach considers the following steps to use *terracatalog* features in an AWS account:
+
+```bash
+# 1. Cloning the source repo via HTTPS
+git clone https://github.com/ThiagoPanini/terracatalog.git
+
+# 2. Navigating to the local repository
+cd terracatalog/
+
+# 3. Initializing Terraform modules
+terraform init
+
+# 4. Planning the deploy
+terraform plan
+
+# 5. Deploying infra
+terraform apply
+```
+
+???+ success "Do whatever you feel more comfortable to"
+    As much as I stated here that calling the *terracatalog* source GitHub module should be the best way to use its features, in truth the best way is that one you feel more comfortable.
+
+    If cloning the repo pleases you, feel free to do it.
+
+    What matters most is users exploring all the good features provided by *terracatalog*!
