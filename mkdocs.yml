@@ -65,6 +65,8 @@ nav:
     - Home: index.md
   - Quickstart:
     - Getting Started: quickstart/gettingstarted.md
+  - Architecture:
+    - Infrastructure Provided: architecture/infra.md
 
 # Setting up MkDocs extensions
 markdown_extensions:
