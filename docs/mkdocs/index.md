@@ -1,36 +1,36 @@
-# Terracatalog: Helping users to start their analytics journey at AWS
+# datadelivery: Helping users to start their analytics journey at AWS
 
 ## Overview
 
-The *terracatalog* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
+The *datadelivery* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
 
 - Have you ever wanted to have a bunch of datasets to explore in AWS?
 - Have you ever wanted to take public data and start building an ETL process?
 - Have you ever wanted to go deep into the Data Mesh architecture with SoR, SoT and Spec layers?
 
-🌘 Try *terracatalog*!
+🚛 Try *datadelivery*!
 
 
 <div align="center">
-    <br><img src="https://github.com/ThiagoPanini/terracatalog/blob/main/docs/assets/imgs/logo.png?raw=true" alt="terraglue-logo" width=200 height=200>
+    <br><img src="https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/logo.png?raw=true" alt="terraglue-logo" width=200 height=200>
 </div>
 
 <div align="center">
-    <i>terracatalog<br>
+    <i>datadelivery<br>
     AWS Pocket Infrastructure</i>
 </div>
 
 <div align="center">  
   <br>
 
-  <img src="https://img.shields.io/github/v/release/ThiagoPanini/terracatalog?color=purple" alt="Shield github release version">
+  <img src="https://img.shields.io/github/v/release/ThiagoPanini/datadelivery?color=purple" alt="Shield github release version">
   
-  <img src="https://img.shields.io/github/last-commit/ThiagoPanini/terracatalog?color=purple" alt="Shield github last commit">
+  <img src="https://img.shields.io/github/last-commit/ThiagoPanini/datadelivery?color=purple" alt="Shield github last commit">
   
-  <img src="https://img.shields.io/github/actions/workflow/status/ThiagoPanini/terracatalog/ci-feature.yml?label=ci" alt="Shield github CI workflow">
+  <img src="https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-feature.yml?label=ci" alt="Shield github CI workflow">
 
-  <a href='https://terracatalog.readthedocs.io/en/latest/?badge=latest'>
-    <img src='https://readthedocs.org/projects/terracatalog/badge/?version=latest' alt='Documentation Status' />
+  <a href='https://datadelivery.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/datadelivery/badge/?version=latest' alt='Documentation Status' />
   </a>
 
 </div>
@@ -48,7 +48,7 @@ ___
 
 ## Read the Docs
 
-- Checkout the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *terracatalog*
+- Checkout the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *datadelivery*
 - At the [Architecture](./architecture/project-architecture.md) page you will see details for all AWS infrastructure provided
 - Still have doubts? Check the [FAQ](./faq/faq.md) page!
     

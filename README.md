@@ -1,14 +1,14 @@
 <div align="center">
-    <br><img src="https://github.com/ThiagoPanini/terracatalog/blob/main/docs/assets/imgs/header-readme.png?raw=true" alt="terracatalog-logo">
+    <br><img src="https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/header-readme.png?raw=true" alt="datadelivery-logo">
 </div>
 
 <div align="center">
   <br>
   
-  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ThiagoPanini/terracatalog?color=purple)
-  ![GitHub Last Commit](https://img.shields.io/github/last-commit/ThiagoPanini/terracatalog?color=purple)
-  ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/terracatalog/ci-main.yml?label=ci)
-  [![Documentation Status](https://readthedocs.org/projects/terraglue/badge/?version=latest)](https://terracatalog.readthedocs.io/pt/latest/?badge=latest)
+  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ThiagoPanini/datadelivery?color=purple)
+  ![GitHub Last Commit](https://img.shields.io/github/last-commit/ThiagoPanini/datadelivery?color=purple)
+  ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-main.yml?label=ci)
+  [![Documentation Status](https://readthedocs.org/projects/terraglue/badge/?version=latest)](https://datadelivery.readthedocs.io/pt/latest/?badge=latest)
 
 </div>
 
@@ -24,16 +24,16 @@ ___
 
 ## Overview
 
-The *terracatalog* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
+The *datadelivery* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
 
 - Have you ever wanted to have a bunch of datasets to explore in AWS?
 - Have you ever wanted to take public data and start building an ETL process?
 - Have you ever wanted to go deep into the Data Mesh architecture with SoR, SoT and Spec layers?
 
-🌘 Try *terracatalog*!
+🚛 Try *datadelivery*!
 
 > **Note**
->  Now the *terracatalog* project has an official documentation in readthedocs! Visit the [following link](https://terracatalog.readthedocs.io/en/latest/) and check out usability technical details, practical examples and more!
+>  Now the *datadelivery* project has an official documentation in readthedocs! Visit the [following link](https://datadelivery.readthedocs.io/en/latest/) and check out usability technical details, practical examples and more!
 
 ___
 
