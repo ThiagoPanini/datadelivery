@@ -45,7 +45,7 @@ variable "datasets_to_upload" {
 variable "iam_glue_crawler_role_name" {
   description = "Role name for Glue Crawler IAM role"
   type        = string
-  default     = "terracatalog-glue-crawler-role"
+  default     = "datadelivery-glue-crawler-role"
 }
 
 
@@ -57,9 +57,9 @@ variable "glue_db_names" {
   description = "List of database names for storing Glue catalog tables"
   type        = map(string)
   default = {
-    "sor"  = "db_terracatalog_sor",
-    "sot"  = "db_terracatalog_sot",
-    "spec" = "db_terracatalog_spec"
+    "sor"  = "db_datadelivery_sor",
+    "sot"  = "db_datadelivery_sot",
+    "spec" = "db_datadelivery_spec"
   }
 }
 

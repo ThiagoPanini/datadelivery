@@ -1,14 +1,14 @@
 # Project main info
-site_name: terracatalog
-site_url: https://github.com/ThiagoPanini/terracatalog
+site_name: datadelivery
+site_url: https://github.com/ThiagoPanini/datadelivery
 site_author: Thiago Panini
 site_description: >-
   A pocket AWS infrastructure with everything its needed to start exploring
   analytics services
 
 # Source repo info
-repo_name: ThiagoPanini/terraglue
-repo_url: https://github.com/ThiagoPanini/terraglue
+repo_name: ThiagoPanini/datadelivery
+repo_url: https://github.com/ThiagoPanini/datadelivery
 
 # Copyright
 copyright: |

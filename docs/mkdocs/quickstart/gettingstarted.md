@@ -6,8 +6,8 @@ In order to start using *datadelivery* to deploy an AWS toolkit for explore publ
 - 🔑 [Programatic access](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) on the account with an `access_key_id` and a `secret_access_key`
 - ⛏ [Terraform](https://www.terraform.io/) installed (version >=1.0)
 
-???+ tip "Two ways for using datadelivery"
-    In fact, there are two ways for using *datadelivery* and all its features:
+???+ tip "Two ways to use datadelivery"
+    In fact, there are two ways to use *datadelivery* and all its features:
     
     1. By calling it from another Terraform project (prefered one)
     2. By cloning the source repo and deploying infrastructure by running the Terraform commands
@@ -31,44 +31,45 @@ module "datadelivery" {
 }
 ```
 
-Check out the demo gifs below to see this working in practice.
+??? question "Do you want to see it in practice? Check out the demos below"
 
-??? example "Creating a Terraform project"
-    There are different ways to use Terraform. In fact, different users can adopt different styles according to their own preferences. The [Terraform language documentation](https://developer.hashicorp.com/terraform/language) will always be a good friend to help users to find their own development style.
+    ??? example "Creating a Terraform project"
+        There are different ways to use Terraform. In fact, different users can adopt different styles according to their own preferences. The [Terraform language documentation](https://developer.hashicorp.com/terraform/language) will always be a good friend to help users to find their own development style.
 
-    Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
+        Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
 
-    ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-01-maintf.gif?raw=true)
-
-
-??? example "Calling the datadelivery module from GitHub"
-    The next step to have *datadelivery* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
-
-    ![Declaring the Terraform module block to call datadelivery source module from GitHub](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-02-module.gif?raw=true)
+        ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-01-maintf.gif?raw=true)
 
 
-??? example "Initializing the module with terraform init"
-    So here we start the Terraform comands to deploy the *datadelivery* module infrastructure provided. The first one is the command used to initialize the module and install all files needed in the project.
+    ??? example "Calling the datadelivery module from GitHub"
+        The next step to have *datadelivery* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
 
-    ![Initializing the module with terraform init](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-03-init.gif?raw=true)
-
-
-??? example "Planning the deploy with terraform deploy"
-    And now that the Terraform project has all components from *datadelivery* module installed, it's time to see the deployment plan through `terraform plan` command.
-
-    ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-04-plan.gif?raw=true)
+        ![Declaring the Terraform module block to call datadelivery source module from GitHub](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-02-module.gif?raw=true)
 
 
-??? example "Deploying infrastructure with terraform apply"
-    Finally, we can deploy the infrastructure using the `terraform apply` command.
+    ??? example "Initializing the module with terraform init"
+        So here we start the Terraform comands to deploy the *datadelivery* module infrastructure provided. The first one is the command used to initialize the module and install all files needed in the project.
 
-    ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-05-apply.gif?raw=true)
+        ![Initializing the module with terraform init](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-03-init.gif?raw=true)
 
-And with the steps above, users will have all elements from *datadelivery* that will help them to improve their analytics skills using a preconfigured environment that offers a bunch of public datasets already cataloged in Data Catalog that can be used for many purposes.
 
-As said before, calling the *datadelivery* source module from GitHub is probably the best way to use its features. The demo videos considered the simplest use case ever possible where a brand new Terraform project was created just for using *datadelivery*, but the idea was to show that users can call *datadelivery* module in huge Terraform projects to fill their needs.
+    ??? example "Planning the deploy with terraform deploy"
+        And now that the Terraform project has all components from *datadelivery* module installed, it's time to see the deployment plan through `terraform plan` command.
 
-:material-alert-decagram:{ .mdx-pulse .warning } By the other hand, users also can choose to clone the source GitHub repository by their own and run the Terraform commands to deploy the infrastructure. The main problem of this approach is that users won't have the latest *datadelivery* features until they pull new updates from the source repo. It means that users should always pay attention to new features and releases from the source repository.
+        ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-04-plan.gif?raw=true)
+
+
+    ??? example "Deploying infrastructure with terraform apply"
+        Finally, we can deploy the infrastructure using the `terraform apply` command.
+
+        ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-05-apply.gif?raw=true)
+
+
+:material-alert-decagram:{ .mdx-pulse .warning } Don't forget to check the [Variables](../variables/variables.md) section to see all acceptable module variables to customize *datadelivery* for your need.
+
+As said before, calling the *datadelivery* source module from GitHub is probably the best way to use its features. With this approach, users can specificy a version on the module call or even use the latest one with all updates. Another good thing about it is that it can be done in a simple Terraform project created just for *datadelivery* or in huge Terraform projects with many other modules. Is up to users to fit *datadelivery* where they wanna!
+
+By the other hand, users also can choose to clone the source GitHub repository by their own and run the Terraform commands to deploy the infrastructure. The main problem of this approach is that users won't have the latest *datadelivery* features until they pull new updates from the source repo.
 
 ## Cloning the Source Repo (Optional)
 
