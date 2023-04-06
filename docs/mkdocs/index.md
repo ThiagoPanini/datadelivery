@@ -2,7 +2,7 @@
 
 ## Overview
 
-The *datadelivery* project is an open source solution that provides a starter toolkit to be deployed in any AWS account in order to enable users to begin their learning path on AWS analytics services, like Athena, Glue, EMR, Redshift. It does that by supplying a [Terraform](https://www.terraform.io/) module that can be called from any Terraform project for deploying all the infrastructure needed to take the first steps using analytics in AWS with public datasets to be explored.
+*datadelivery* is an open source [Terraform](https://www.terraform.io/)  module that provides a starter infrastructure toolkit to be deployed in any AWS account in order to help users to explore analytics services like Athena, Glue, EMR, Redshift and others. It does that by uploading and cataloging public datasets that can be used for multiple purposes, either to create jobs or just to query data using AWS services.
 
 - Have you ever wanted to have a bunch of datasets to explore in AWS?
 - Have you ever wanted to take public data and start building an ETL process?
@@ -12,13 +12,9 @@ The *datadelivery* project is an open source solution that provides a starter to
 
 
 <div align="center">
-    <br><img src="https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/logo.png?raw=true" alt="terraglue-logo" width=200 height=200>
+    <br><img src="https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/header-readme.png?raw=true" alt="datadelivery-logo">
 </div>
 
-<div align="center">
-    <i>datadelivery<br>
-    AWS Pocket Infrastructure</i>
-</div>
 
 <div align="center">  
   <br>
@@ -61,7 +57,7 @@ When users call the *datadelivery* Terraform module, the following operations ar
 
 This is the *datadelivery* project documentation page. There are other complementary solutions that can be chained to enable a powerful learning journey on AWS. [Check it out](https://github.com/ThiagoPanini) if you think they could be useful for you!
 
-![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/products-overview.png?raw=true)
+![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/products-overview-v2.png?raw=true)
 
 ## Read the Docs
 
