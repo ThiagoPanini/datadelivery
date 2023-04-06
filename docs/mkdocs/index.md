@@ -45,11 +45,29 @@ ___
 - 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
 
+## How it Works?
+
+When users call the *datadelivery* Terraform module, the following operations are performed:
+
+1. Five different buckets are created in the target AWS account
+2. The content of `data/` folder at the source module are uploaded to the SoR bucket
+3. An IAM role is created with enough permissions to run a Glue Crawler
+4. A Glue Crawler is created with a S3 target pointing to the SoR bucket
+5. A cron expression is configured to trigger the Glue Crawler 2 minutes after finishing the infrastructure deployment
+6. All files from SoR bucket (previously on `data/` folder) are cataloged as new tables on Data Catalog
+7. A preconfigured Athena workgroup is created in order to enable users to run queries
+
+## Combining Solutions
+
+This is the *datadelivery* project documentation page. There are other complementary solutions that can be chained to enable a powerful learning journey on AWS. Check it out if you can!
+
+![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/products-overview.png?raw=true)
 
 ## Read the Docs
 
-- Checkout the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *datadelivery*
-- At the [Architecture](./architecture/project-architecture.md) page you will see details for all AWS infrastructure provided
+- Check out the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *datadelivery*
+- The [Variables](./variables/variables.md) section helps users to understand all available module variables 
+- The [Architecture](./architecture/infra.md) page you will see details for all AWS infrastructure provided
 - Still have doubts? Check the [FAQ](./faq/faq.md) page!
     
 

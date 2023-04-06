@@ -9,7 +9,7 @@ In order to start using *datadelivery* to deploy an AWS toolkit for explore publ
 ???+ tip "Two ways to use datadelivery"
     In fact, there are two ways to use *datadelivery* and all its features:
     
-    1. By calling it from another Terraform project (prefered one)
+    1. By calling it from another Terraform project **(prefered one)**
     2. By cloning the source repo and deploying infrastructure by running the Terraform commands
 
     In this section users will take the chance to precisely look at both usage modes in order to select the one that best suits their needs.
@@ -32,6 +32,7 @@ module "datadelivery" {
 ```
 
 ??? question "Do you want to see it in practice? Check out the demos below"
+    The demos consider the simplest Terraform project possible where a `main.tf` is created to call the *datadelivery* module. Here you will be able to see a step by step guide on how to declare the module call and to run Terraform commands in order to use *datadelivery* features in your AWS account.
 
     ??? example "Creating a Terraform project"
         There are different ways to use Terraform. In fact, different users can adopt different styles according to their own preferences. The [Terraform language documentation](https://developer.hashicorp.com/terraform/language) will always be a good friend to help users to find their own development style.
@@ -67,13 +68,12 @@ module "datadelivery" {
 
 :material-alert-decagram:{ .mdx-pulse .warning } Don't forget to check the [Variables](../variables/variables.md) section to see all acceptable module variables to customize *datadelivery* for your need.
 
-As said before, calling the *datadelivery* source module from GitHub is probably the best way to use its features. With this approach, users can specificy a version on the module call or even use the latest one with all updates. Another good thing about it is that it can be done in a simple Terraform project created just for *datadelivery* or in huge Terraform projects with many other modules. Is up to users to fit *datadelivery* where they wanna!
-
-By the other hand, users also can choose to clone the source GitHub repository by their own and run the Terraform commands to deploy the infrastructure. The main problem of this approach is that users won't have the latest *datadelivery* features until they pull new updates from the source repo.
 
 ## Cloning the Source Repo (Optional)
 
-This approach considers the following steps to use *datadelivery* features in an AWS account:
+Another way to use *datadelivery* features is by cloning the source GitHub repository in a local environment and running Terraform commands to deploy the infrastructure declared.
+
+This approach considers the following steps:
 
 ```bash
 # 1. Cloning the source repo via HTTPS
@@ -92,9 +92,15 @@ terraform plan
 terraform apply
 ```
 
-???+ success "Do whatever you feel more comfortable to"
-    As much as I stated here that calling the *datadelivery* source GitHub module should be the best way to use its features, in truth the best way is that one you feel more comfortable.
+And that's all to deploy all *datadelivery* features in your AWS account!
 
-    If cloning the repo pleases you, feel free to do it.
+## Module Call or Repo Clone?
 
-    What matters most is users exploring all the good features provided by *datadelivery*!
+First of all, there is no right or wrong way.
+
+Calling the *datadelivery* directly from GitHub in a Terraform project can be a good way to decouple things. With this approach, users can do versioning on module call or always get the latest version available. Beyond that, *datadelivery* can be used in huge Terraform project with another module calls.
+
+Cloning the source GitHub repository and applying the Terraform commands can also be a good alternative if users want to customize the project before deploying. This can be done, for example, by adding new files into `data/` folder to be uploaded and hence cataloged by the Glue Crawler. The main trade off is the need to always look at module updates on the source repo or the permanent need to run `git pull` commands to have the latest features.
+
+???+ success "Choose whatever fits best for you"
+    As long as you can enjoy using *datadelivery* to have all you need to start exploring data in AWS, it doesn't matter which way you choose to achieve that.

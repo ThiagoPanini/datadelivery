@@ -36,14 +36,14 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Click to change for dark mode
+        name: Click here for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep purple
       accent: deep purple
       toggle:
         icon: material/weather-night
-        name: Click to change for light mode
+        name: Click here for light mode
 
   # Setting up template features
   features:
@@ -65,6 +65,8 @@ nav:
     - Home: index.md
   - Quickstart:
     - Getting Started: quickstart/gettingstarted.md
+  - Variables:
+    - Module Variables: variables/variables.md
   - Architecture:
     - Infrastructure Provided: architecture/infra.md
 

@@ -42,7 +42,7 @@ variable "datasets_to_upload" {
 ---------------- VARIABLES: iam module ----------------
 -------------------------------------------------------- */
 
-variable "iam_glue_crawler_role_name" {
+variable "crawler_role_name" {
   description = "Role name for Glue Crawler IAM role"
   type        = string
   default     = "datadelivery-glue-crawler-role"
