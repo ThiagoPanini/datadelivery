@@ -1,85 +1,86 @@
-# Getting Started with terracatalog
+# Getting Started with datadelivery
 
-In order to start using *terracatalog* to deploy an AWS toolkit for explore public dasets using analytics services, users will need:
+In order to start using *datadelivery* to deploy an AWS toolkit for explore public dasets using analytics services, users will need:
 
 - ☁️ [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) available for use
 - 🔑 [Programatic access](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) on the account with an `access_key_id` and a `secret_access_key`
 - ⛏ [Terraform](https://www.terraform.io/) installed (version >=1.0)
 
-???+ tip "Two ways for using terracatalog"
-    In fact, there are two ways for using *terracatalog* and all its features:
+???+ tip "Two ways to use datadelivery"
+    In fact, there are two ways to use *datadelivery* and all its features:
     
-    1. By calling it from another Terraform project (prefered one)
+    1. By calling it from another Terraform project **(prefered one)**
     2. By cloning the source repo and deploying infrastructure by running the Terraform commands
 
     In this section users will take the chance to precisely look at both usage modes in order to select the one that best suits their needs.
 
 ___
 
-## Calling terracatalog Module
+## Calling datadelivery Module
 
 As stated in the official Terraform documentation:
 
 > A module is a container for multiple resources that are used together. You can use modules to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects.
 
-If you already have a Terraform project and you want to add *terracatalog* features to it, you can just call the module directly from [GitHub](https://github.com/ThiagoPanini/terracatalog) using the following sintax:
+If you already have a Terraform project and you want to add *datadelivery* features to it, you can just call the module directly from [GitHub](https://github.com/ThiagoPanini/datadelivery) using the following sintax:
 
 ```json
-# Calling terracatalog module with default configuration
-module "terracatalog" {
-  source = "git::https://github.com/ThiagoPanini/terracatalog"
+# Calling datadelivery module with default configuration
+module "datadelivery" {
+  source = "git::https://github.com/ThiagoPanini/datadelivery"
 }
 ```
 
-Check out the demo gifs below to see this working in practice.
+??? question "Do you want to see it in practice? Check out the demos below"
+    The demos consider the simplest Terraform project possible where a `main.tf` is created to call the *datadelivery* module. Here you will be able to see a step by step guide on how to declare the module call and to run Terraform commands in order to use *datadelivery* features in your AWS account.
 
-??? example "Creating a Terraform project"
-    There are different ways to use Terraform. In fact, different users can adopt different styles according to their own preferences. The [Terraform language documentation](https://developer.hashicorp.com/terraform/language) will always be a good friend to help users to find their own development style.
+    ??? example "Creating a Terraform project"
+        There are different ways to use Terraform. In fact, different users can adopt different styles according to their own preferences. The [Terraform language documentation](https://developer.hashicorp.com/terraform/language) will always be a good friend to help users to find their own development style.
 
-    Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
+        Here, to make things simpler, let's just create a new folder and a `main.tf` file to be our main file of our project root module.
 
-    ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-01-maintf.gif?raw=true)
-
-
-??? example "Calling the terracatalog module from GitHub"
-    The next step to have *terracatalog* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
-
-    ![Declaring the Terraform module block to call terracatalog source module from GitHub](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-02-module.gif?raw=true)
+        ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-01-maintf.gif?raw=true)
 
 
-??? example "Initializing the module with terraform init"
-    So here we start the Terraform comands to deploy the *terracatalog* module infrastructure provided. The first one is the command used to initialize the module and install all files needed in the project.
+    ??? example "Calling the datadelivery module from GitHub"
+        The next step to have *datadelivery* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
 
-    ![Initializing the module with terraform init](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-03-init.gif?raw=true)
-
-
-??? example "Planning the deploy with terraform deploy"
-    And now that the Terraform project has all components from *terracatalog* module installed, it's time to see the deployment plan through `terraform plan` command.
-
-    ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-04-plan.gif?raw=true)
+        ![Declaring the Terraform module block to call datadelivery source module from GitHub](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-02-module.gif?raw=true)
 
 
-??? example "Deploying infrastructure with terraform apply"
-    Finally, we can deploy the infrastructure using the `terraform apply` command.
+    ??? example "Initializing the module with terraform init"
+        So here we start the Terraform comands to deploy the *datadelivery* module infrastructure provided. The first one is the command used to initialize the module and install all files needed in the project.
 
-    ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/terracatalog/blob/feature/first-deploy/docs/assets/gifs/terracatalog-quickstart-05-apply.gif?raw=true)
+        ![Initializing the module with terraform init](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-03-init.gif?raw=true)
 
-And with the steps above, users will have all elements from *terracatalog* that will help them to improve their analytics skills using a preconfigured environment that offers a bunch of public datasets already cataloged in Data Catalog that can be used for many purposes.
 
-As said before, calling the *terracatalog* source module from GitHub is probably the best way to use its features. The demo videos considered the simplest use case ever possible where a brand new Terraform project was created just for using *terracatalog*, but the idea was to show that users can call *terracatalog* module in huge Terraform projects to fill their needs.
+    ??? example "Planning the deploy with terraform deploy"
+        And now that the Terraform project has all components from *datadelivery* module installed, it's time to see the deployment plan through `terraform plan` command.
 
-:material-alert-decagram:{ .mdx-pulse .warning } By the other hand, users also can choose to clone the source GitHub repository by their own and run the Terraform commands to deploy the infrastructure. The main problem of this approach is that users won't have the latest *terracatalog* features until they pull new updates from the source repo. It means that users should always pay attention to new features and releases from the source repository.
+        ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-04-plan.gif?raw=true)
+
+
+    ??? example "Deploying infrastructure with terraform apply"
+        Finally, we can deploy the infrastructure using the `terraform apply` command.
+
+        ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-05-apply.gif?raw=true)
+
+
+:material-alert-decagram:{ .mdx-pulse .warning } Don't forget to check the [Variables](../variables/variables.md) section to see all acceptable module variables to customize *datadelivery* for your need.
+
 
 ## Cloning the Source Repo (Optional)
 
-This approach considers the following steps to use *terracatalog* features in an AWS account:
+Another way to use *datadelivery* features is by cloning the source GitHub repository in a local environment and running Terraform commands to deploy the infrastructure declared.
+
+This approach considers the following steps:
 
 ```bash
 # 1. Cloning the source repo via HTTPS
-git clone https://github.com/ThiagoPanini/terracatalog.git
+git clone https://github.com/ThiagoPanini/datadelivery.git
 
 # 2. Navigating to the local repository
-cd terracatalog/
+cd datadelivery/
 
 # 3. Initializing Terraform modules
 terraform init
@@ -91,9 +92,15 @@ terraform plan
 terraform apply
 ```
 
-???+ success "Do whatever you feel more comfortable to"
-    As much as I stated here that calling the *terracatalog* source GitHub module should be the best way to use its features, in truth the best way is that one you feel more comfortable.
+And that's all to deploy all *datadelivery* features in your AWS account!
 
-    If cloning the repo pleases you, feel free to do it.
+## Module Call or Repo Clone?
 
-    What matters most is users exploring all the good features provided by *terracatalog*!
+First of all, there is no right or wrong way.
+
+Calling the *datadelivery* directly from GitHub in a Terraform project can be a good way to decouple things. With this approach, users can do versioning on module call or always get the latest version available. Beyond that, *datadelivery* can be used in huge Terraform project with another module calls.
+
+Cloning the source GitHub repository and applying the Terraform commands can also be a good alternative if users want to customize the project before deploying. This can be done, for example, by adding new files into `data/` folder to be uploaded and hence cataloged by the Glue Crawler. The main trade off is the need to always look at module updates on the source repo or the permanent need to run `git pull` commands to have the latest features.
+
+???+ success "Choose whatever fits best for you"
+    As long as you can enjoy using *datadelivery* to have all you need to start exploring data in AWS, it doesn't matter which way you choose to achieve that.
