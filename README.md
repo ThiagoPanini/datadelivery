@@ -16,6 +16,8 @@
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Features](#features)
+- [How it Works?](#how-it-works)
+- [Combining Solutions](#combining-solutions)
 - [Contacts](#contacts)
 - [References](#references)
 
@@ -44,6 +46,24 @@ ___
 - 🤖 Automatic data cataloging process using a scheduled Glue Crawler
 - 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
+
+## How it Works?
+
+When users call the *datadelivery* Terraform module, the following operations are performed:
+
+1. Five different buckets are created in the target AWS account
+2. The content of `data/` folder at the source module are uploaded to the SoR bucket
+3. An IAM role is created with enough permissions to run a Glue Crawler
+4. A Glue Crawler is created with a S3 target pointing to the SoR bucket
+5. A cron expression is configured to trigger the Glue Crawler 2 minutes after finishing the infrastructure deployment
+6. All files from SoR bucket (previously on `data/` folder) are cataloged as new tables on Data Catalog
+7. A preconfigured Athena workgroup is created in order to enable users to run queries
+
+## Combining Solutions
+
+This is the *datadelivery* project documentation page. There are other complementary solutions that can be chained to enable a powerful learning journey on AWS. [Check it out](https://github.com/ThiagoPanini) if you think they could be useful for you!
+
+![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/products-overview.png?raw=true)
 
 ___
 
