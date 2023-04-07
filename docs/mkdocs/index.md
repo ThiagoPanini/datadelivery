@@ -41,7 +41,7 @@ ___
 - 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
 
-## How it Works?
+## How Does it Works?
 
 When users call the *datadelivery* Terraform module, the following operations are performed:
 
@@ -55,7 +55,7 @@ When users call the *datadelivery* Terraform module, the following operations ar
 
 ## Combining Solutions
 
-This is the *datadelivery* project documentation page. There are other complementary solutions that can be chained to enable a powerful learning journey on AWS. [Check it out](https://github.com/ThiagoPanini) if you think they could be useful for you!
+The *datadelivery* Terraform module isn't alone. There are other complementary open source solutions that can be put together to enable the full power of learning analytics on AWS. [Check it out](https://github.com/ThiagoPanini) if you think they could be useful for you!
 
 ![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/products-overview-v2.png?raw=true)
 
@@ -63,9 +63,7 @@ This is the *datadelivery* project documentation page. There are other complemen
 
 - Check out the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *datadelivery*
 - The [Variables](./variables/variables.md) section helps users to understand all available module variables 
-- The [Architecture](./architecture/infra.md) page you will see details for all AWS infrastructure provided
-- Still have doubts? Check the [FAQ](./faq/faq.md) page!
-    
+- The [Architecture](./architecture/infra.md) page you will see details for all AWS infrastructure provided    
 
 ## Contacts
 
