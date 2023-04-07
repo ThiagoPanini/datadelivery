@@ -24,7 +24,7 @@ Considering the project architecture presented above, the table below shows how 
 
 | 📂 **File** | ⚙️ **Description** |
 | :-- | :-- |
-| `storage.tf` | Handles the creation of s3 buckets and file upload |
-| `iam.tf` | Handles all policy and role creation |
+| `storage.tf` | Creates all s3 buckets and upload all files in `data/` folder into buckets |
+| `iam.tf` | Creates IAM policies and role to be assumed by a Glue Crawler |
 | `catalog.tf` | Sets a preconfigured Glue Crawler to catalog raw files as tables in Data Catalog |
-| `athena` | Creates a preconfigured Athena workgroup |
+| `athena.tf` | Creates a preconfigured Athena workgroup to help users to run their queris |
