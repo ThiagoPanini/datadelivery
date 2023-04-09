@@ -101,4 +101,7 @@ extra_css:
 # Plugins
 plugins:
   - mkdocstrings
-  - mkdocs-video
+  - mkdocs-video:
+      is_video: True
+      video_muted: true
+      video_controls: True
