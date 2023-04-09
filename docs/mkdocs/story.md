@@ -52,7 +52,7 @@ I state that in the project documentation home page, but this is the perfect tim
 
 If writing it isn't enough, take a look at the project diagram:
 
-[![A diagram of services deployed](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/project-diagram.png?raw=true)](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/project-diagram.png?raw=true)
+[![A diagram of services deployed](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/project-diagram.png?raw=true)](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/project-diagram.png?raw=true)
 
 Do you want to know more about the "behind the scenes" of the project construction? I will present some code details about how all the infrastructure was declared in the module.
 
