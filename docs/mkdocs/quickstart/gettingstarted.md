@@ -31,7 +31,7 @@ module "datadelivery" {
 }
 ```
 
-??? question "Do you want to see it in practice? Check out the demos below"
+??? question "Do you want to see this in practice? Check out the demos below"
     The demos consider the simplest Terraform project possible where a `main.tf` is created to call the *datadelivery* module. Here you will be able to see a step by step guide on how to declare the module call and to run Terraform commands in order to use *datadelivery* features in your AWS account.
 
     ??? example "Creating a Terraform project"
@@ -43,7 +43,7 @@ module "datadelivery" {
 
 
     ??? example "Calling the datadelivery module from GitHub"
-        The next step to have *datadelivery* features available is to call its module directly from GitHub. It can be define by defining a Terraform `module` call passing the GitHub repository reference as source.
+        The next step to have *datadelivery* features available is to call its module directly from GitHub. It can be defined by a Terraform `module` call passing the GitHub repository reference as source.
 
         ![Declaring the Terraform module block to call datadelivery source module from GitHub](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/gifs/datadelivery-quickstart-02-module.gif?raw=true)
 

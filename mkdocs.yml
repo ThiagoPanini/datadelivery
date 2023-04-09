@@ -63,6 +63,7 @@ theme:
 nav:
   - Home:
     - Home: index.md
+    - Project Story: story.md
   - Quickstart:
     - Getting Started: quickstart/gettingstarted.md
   - Variables:

@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "this" {
   force_destroy = true
 }
 
-# Blocking all public access dor buckets
+# Blocking all public access for buckets
 resource "aws_s3_bucket_public_access_block" "all_private" {
   for_each = var.flag_s3_block_public_access ? local.bucket_names_map : {}
   bucket   = aws_s3_bucket.this[each.key].id

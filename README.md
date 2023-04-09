@@ -7,7 +7,7 @@
   
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ThiagoPanini/datadelivery?color=purple)
   ![GitHub Last Commit](https://img.shields.io/github/last-commit/ThiagoPanini/datadelivery?color=purple)
-  ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-main.yml?label=ci)
+  ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-feature.yml?label=ci)
   [![Documentation Status](https://readthedocs.org/projects/terraglue/badge/?version=latest)](https://datadelivery.readthedocs.io/pt/latest/?badge=latest)
 
 </div>
@@ -16,7 +16,7 @@
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Features](#features)
-- [How it Works?](#how-it-works)
+- [How Does it Work?](#how-does-it-work)
 - [Combining Solutions](#combining-solutions)
 - [Contacts](#contacts)
 - [References](#references)
@@ -47,7 +47,7 @@ ___
 - 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
 
-## How it Works?
+## How Does it Work?
 
 When users call the *datadelivery* Terraform module, the following operations are performed:
 

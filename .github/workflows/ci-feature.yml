@@ -11,9 +11,22 @@ permissions:
   pull-requests: write
 
 jobs:
+  ci-terraform:
+    name: ci-terraform
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Terraform Validate
+        uses: dflook/terraform-validate@v1
+
   open-pr-to-main:
     name: open-pr-to-main
     runs-on: ubuntu-latest
+    needs:
+      - ci-terraform
 
     steps:
       - name: Checkout
