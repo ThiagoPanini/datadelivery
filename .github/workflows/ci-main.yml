@@ -1,14 +1,13 @@
 name: "⚙️ CI feature branch"
 
 on:
-  push:
+  pull_request:
     branches:
-      - feature**
+      - main
 
 permissions:
   id-token: write
   contents: read
-  pull-requests: write
 
 jobs:
   ci-terraform:
