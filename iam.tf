@@ -28,7 +28,7 @@ resource "aws_iam_policy" "glue_policies" {
 
 # Creating role for Glue Crawler
 resource "aws_iam_role" "glue_crawler_role" {
-  name               = var.iam_glue_crawler_role_name
+  name               = var.crawler_role_name
   assume_role_policy = data.aws_iam_policy_document.glue_trust.json
   managed_policy_arns = concat(
     [for p in aws_iam_policy.glue_policies : p.arn],
