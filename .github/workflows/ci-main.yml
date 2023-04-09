@@ -20,22 +20,3 @@ jobs:
 
       - name: Terraform Validate
         uses: dflook/terraform-validate@v1
-
-  open-pr-to-main:
-    name: open-pr-to-main
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: PR to main
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: ${{ github.ref }}
-          destination_branch: "main"
-          pr_title: "pr(main): ${{ github.ref }} -> main"
-          pr_template: ".github/pull_request_template.md"
-          pr_assignee: "ThiagoPanini"
-          pr_label: "github-bot 🤖"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
