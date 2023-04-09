@@ -66,5 +66,5 @@ variable "glue_db_names" {
 variable "delay_to_run_crawler" {
   description = "A string representation to be considered as a time difference between the time of infrastructure deploy and the time to run the Glue Crawler"
   type        = string
-  default     = "2m"
+  default     = "5m"
 }
