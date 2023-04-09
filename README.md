@@ -8,7 +8,7 @@
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ThiagoPanini/datadelivery?color=purple)
   ![GitHub Last Commit](https://img.shields.io/github/last-commit/ThiagoPanini/datadelivery?color=purple)
   ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-main.yml?label=ci)
-  [![Documentation Status](https://readthedocs.org/projects/terraglue/badge/?version=latest)](https://datadelivery.readthedocs.io/pt/latest/?badge=latest)
+  [![Documentation Status](https://readthedocs.org/projects/datadelivery/badge/?version=latest)](https://datadelivery.readthedocs.io/en/latest/?badge=latest)
 
 </div>
 
