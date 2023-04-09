@@ -1,8 +1,8 @@
-# datadelivery: Helping users to start their analytics journey at AWS
+# datadelivery: A Data Exploration Toolkit
 
 ## Overview
 
-*datadelivery* is an open source [Terraform](https://www.terraform.io/)  module that provides a starter infrastructure toolkit to be deployed in any AWS account in order to help users to explore analytics services like Athena, Glue, EMR, Redshift and others. It does that by uploading and cataloging public datasets that can be used for multiple purposes, either to create jobs or just to query data using AWS services.
+*datadelivery* is an open source [Terraform](https://www.terraform.io/) module that provides an infrastructure toolkit to be deployed in any AWS account in order to help users to explore analytics services like Athena, Glue, EMR, Redshift and others. It does that by uploading and cataloging public datasets that can be used for multiple purposes, either to create jobs or just to query data using AWS services.
 
 - Have you ever wanted to have a bunch of datasets to explore in AWS?
 - Have you ever wanted to take public data and start building an ETL process?
@@ -41,7 +41,7 @@ ___
 - 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
 
-## How Does it Works?
+## How Does it Work?
 
 When users call the *datadelivery* Terraform module, the following operations are performed:
 
@@ -61,9 +61,10 @@ The *datadelivery* Terraform module isn't alone. There are other complementary o
 
 ## Read the Docs
 
-- Check out the [Quickstart](./quickstart/gettingstarted.md) page for a step by step guide on how to start using *datadelivery*
+- Do you like stories? If you do, you should check the [Project Story](story.md) page
+- The [Quickstart](./quickstart/gettingstarted.md) page provides a step by step guide on how to start using *datadelivery*
 - The [Variables](./variables/variables.md) section helps users to understand all available module variables 
-- The [Architecture](./architecture/infra.md) page you will see details for all AWS infrastructure provided    
+- In the [Architecture](./architecture/infra.md) page you will see details of all AWS infrastructure provided    
 
 ## Contacts
 

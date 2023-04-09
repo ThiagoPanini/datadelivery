@@ -16,7 +16,7 @@
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Features](#features)
-- [How it Works?](#how-it-works)
+- [How Does it Work?](#how-does-it-work)
 - [Combining Solutions](#combining-solutions)
 - [Contacts](#contacts)
 - [References](#references)
@@ -47,7 +47,7 @@ ___
 - 🎲 Provides different dataset tables ready to be explored in any AWS analytics service
 - 🔦 Destroy everything and recreate all again at a touch of a single command
 
-## How it Works?
+## How Does it Work?
 
 When users call the *datadelivery* Terraform module, the following operations are performed:
 
