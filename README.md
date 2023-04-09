@@ -7,7 +7,7 @@
   
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ThiagoPanini/datadelivery?color=purple)
   ![GitHub Last Commit](https://img.shields.io/github/last-commit/ThiagoPanini/datadelivery?color=purple)
-  ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-feature.yml?label=ci)
+  ![CI workflow](https://img.shields.io/github/actions/workflow/status/ThiagoPanini/datadelivery/ci-main.yml?label=ci)
   [![Documentation Status](https://readthedocs.org/projects/terraglue/badge/?version=latest)](https://datadelivery.readthedocs.io/pt/latest/?badge=latest)
 
 </div>
@@ -87,3 +87,7 @@ ___
 - [Terraform - Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 - [Medium - Maintaining Reusable Terraform Modules](https://arunksingh16.medium.com/maintaining-reusable-terraform-modules-in-github-d0440753e784)
 - [Terraform - Filesystem and Workspace Info](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
+
+**GitHub**
+
+- [GitHub - terraform-validate Action](https://github.com/marketplace/actions/terraform-validate)
