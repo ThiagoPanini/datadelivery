@@ -6,7 +6,7 @@ As stated in the [main page](../index.md) in this documentation, the *datadelive
 
 The diagram of services deployed can be found below:
 
-[![A diagram of services deployed](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/project-diagram.png?raw=true)](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/project-diagram.png?raw=true)
+[![A diagram of services deployed](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/project-diagram.png?raw=true)](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/project-diagram.png?raw=true)
 
 In essence, by using *datadelivery*, users will have:
 

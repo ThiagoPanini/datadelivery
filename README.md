@@ -61,9 +61,9 @@ When users call the *datadelivery* Terraform module, the following operations ar
 
 ## Combining Solutions
 
-This is the *datadelivery* project documentation page. There are other complementary solutions that can be chained to enable a powerful learning journey on AWS. [Check it out](https://github.com/ThiagoPanini) if you think they could be useful for you!
+The *datadelivery* Terraform module isn't alone. There are other complementary open source solutions that can be put together to enable the full power of learning analytics on AWS. [Check it out](https://github.com/ThiagoPanini) if you think they could be useful for you!
 
-![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/feature/first-deploy/docs/assets/imgs/products-overview.png?raw=true)
+![A diagram showing how its possible to use other solutions like datadelivery, terraglue and sparksnake](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/imgs/products-overview-v2.png?raw=true)
 
 ___
 
