@@ -65,6 +65,11 @@ module "datadelivery" {
 
         ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-quickstart-05-apply.gif?raw=true)
 
+Basically, by calling the *datadelivery* module, users will have a combination of AWS elements created in order to enhance data exploration and analysis. The video below was made to provide a complete view of all resources deployed in the target AWS account after the `terraform apply` command.
+
+![](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-usage-demo.gif?raw=true)
+
+___
 
 :material-alert-decagram:{ .mdx-pulse .warning } Don't forget to check the [Variables](../variables/variables.md) section to see all acceptable module variables to customize *datadelivery* for your need.
 

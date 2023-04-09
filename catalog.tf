@@ -22,7 +22,7 @@ resource "aws_glue_catalog_database" "mesh" {
 
 # Defining an Athena preconfigured workgroup
 resource "aws_athena_workgroup" "analytics" {
-  name          = "terracatalog-workgroup"
+  name          = "datadelivery-workgroup"
   force_destroy = true
 
   configuration {
@@ -40,7 +40,7 @@ resource "aws_athena_workgroup" "analytics" {
 # Defining a Glue Crawler
 resource "aws_glue_crawler" "sor" {
   database_name = var.glue_db_names["sor"]
-  name          = "terracatalog-glue-crawler-sor"
+  name          = "datadelivery-glue-crawler-sor"
   role          = aws_iam_role.glue_crawler_role.arn
 
   s3_target {
