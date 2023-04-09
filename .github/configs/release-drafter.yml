@@ -35,6 +35,7 @@ categories:
       - tests 🛡️
 
   - title: ⚙️ Configuration and Maintenance
+    labels:
       - config ⚙️
 
   - title: 🖍️ Documentation
