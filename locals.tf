@@ -35,6 +35,7 @@ locals {
   timestamp_to_run = timeadd(timestamp(), var.delay_to_run_crawler)
 
   # Getting date information
+  /*
   cron_day    = formatdate("D", local.timestamp_to_run)
   cron_month  = formatdate("M", local.timestamp_to_run)
   cron_year   = formatdate("YYYY", local.timestamp_to_run)
@@ -43,4 +44,5 @@ locals {
 
   # Building a cron expression for Glue Crawler to run minutes after infrastructure deploy
   crawler_cron_expr = "cron(${local.cron_minute} ${local.cron_hour} ${local.cron_day} ${local.cron_month} ? ${local.cron_year})"
+  */
 }
