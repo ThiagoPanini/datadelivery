@@ -44,4 +44,8 @@ resource "aws_s3_object" "data_sources" {
   key                    = each.value
   source                 = "${local.data_path}${each.value}"
   server_side_encryption = "aws:kms"
+
+  depends_on = [
+    aws_s3_bucket.this
+  ]
 }
