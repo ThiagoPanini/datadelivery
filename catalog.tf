@@ -49,12 +49,12 @@ resource "aws_glue_crawler" "sor" {
 
   schedule = join("", concat(
     ["cron("],
-    [formatdate("m", timeadd(timestamp(), var.delay_to_run_crawler))],
-    [formatdate("h", timeadd(timestamp(), var.delay_to_run_crawler))],
-    [formatdate("D", timeadd(timestamp(), var.delay_to_run_crawler))],
-    [formatdate("M", timeadd(timestamp(), var.delay_to_run_crawler))],
-    ["?"],
-    [formatdate("YYYY", timeadd(timestamp(), var.delay_to_run_crawler))],
+    ["${formatdate("m", timeadd(timestamp(), var.delay_to_run_crawler))} "],
+    ["${formatdate("h", timeadd(timestamp(), var.delay_to_run_crawler))} "],
+    ["${formatdate("D", timeadd(timestamp(), var.delay_to_run_crawler))} "],
+    ["${formatdate("M", timeadd(timestamp(), var.delay_to_run_crawler))} "],
+    ["? "],
+    ["${formatdate("YYYY", timeadd(timestamp(), var.delay_to_run_crawler))} "],
     [")"]
   ))
 
