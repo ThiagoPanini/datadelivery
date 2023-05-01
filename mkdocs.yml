@@ -36,14 +36,14 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: Click here for dark mode
+        name: Tap for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep purple
       accent: deep purple
       toggle:
         icon: material/weather-night
-        name: Click here for light mode
+        name: Tap for light mode
 
   # Setting up template features
   features:

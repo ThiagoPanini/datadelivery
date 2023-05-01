@@ -1,7 +1,7 @@
 /* --------------------------------------------------------
 FILE: iam.tf
 
-This file handls the declaration of Terraform resources
+This file handles the declaration of Terraform resources
 used to create an IAM role for Glue Crawler to run. It uses
 the infra/policy/ folder to read the JSON files to create
 all policies needed.
