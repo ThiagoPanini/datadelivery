@@ -41,7 +41,7 @@ resource "aws_athena_workgroup" "analytics" {
 resource "aws_glue_crawler" "sor" {
   database_name = var.glue_db_names["sor"]
   name          = "datadelivery-glue-crawler-sor"
-  role          = aws_iam_role.glue_crawler_role.arn
+  role          = local.glue_crawler_role_arn
 
   s3_target {
     path = "s3://${local.bucket_names_map["sor"]}"
@@ -59,7 +59,8 @@ resource "aws_glue_crawler" "sor" {
   ))
 
   depends_on = [
-    aws_s3_object.data_sources,
+    aws_s3_object.module_files,
+    aws_s3_object.custom_files,
     aws_iam_policy.glue_policies,
     aws_iam_role.glue_crawler_role
   ]
