@@ -26,23 +26,42 @@ locals {
   }
 
   # Referencing a data folder where the files to be uploaded are located
-  data_path = "${path.module}/data/"
+  # data_path = var.upload_module_data ? "${path.module}/data/" : var.custom_data_dir
+  # module_data_files = var.upload_module_data ? list(fileset("${path.module}/data/", "**")) : []
+  # custom_data_files = var.upload_custom_data ? list(fileset("${var.custom_data_dir}", "**")) : []
+  # all_data_files    = concat(local.module_data_files, local.custom_data_files)
 
   # Referencing a policies folder where the JSON files for policies are located
   iam_policies_path = "${path.module}/policy/"
 
+  # If users want to create an IAM role for Glue Crawler, so this variable will consider the ARN of the given role. If not, this variable will hold the ARN string for an existing IAM role identified by its name
+  glue_crawler_role_arn = var.create_crawler_role ? aws_iam_role.glue_crawler_role[0].arn : "arn:aws:iam::${local.account_id}:role/${var.crawler_role_name}"
+
   # Extracting current timestamp and adding a delay
   timestamp_to_run = timeadd(timestamp(), var.delay_to_run_crawler)
 
-  # Getting date information
-  /*
-  cron_day    = formatdate("D", local.timestamp_to_run)
-  cron_month  = formatdate("M", local.timestamp_to_run)
-  cron_year   = formatdate("YYYY", local.timestamp_to_run)
-  cron_hour   = formatdate("h", local.timestamp_to_run)
-  cron_minute = formatdate("m", local.timestamp_to_run)
 
-  # Building a cron expression for Glue Crawler to run minutes after infrastructure deploy
-  crawler_cron_expr = "cron(${local.cron_minute} ${local.cron_hour} ${local.cron_day} ${local.cron_month} ? ${local.cron_year})"
-  */
+  /* --------------------------------------------------------
+  ------------------ VALIDATING VARIABLES -------------------
+  -----------------------------------------------------------
+
+  According to discussions in the issue #25609 of the source
+  Terraform project (the official one), Terraform can't handle
+  variables validation using a condition that references multiple
+  variables.
+
+  It means that if users want to apply a validate condition
+  in a variable (e.g. "x") using information about another 
+  variable (e.g. "y"), the error below is thrown:
+
+  The condition for variable "x" can only refer to the variable
+  itself, using var.y.
+
+  Workarounds:
+  https://github.com/hashicorp/terraform/issues/25609,
+  https://github.com/hashicorp/terraform/issues/25609#issuecomment-1057614400
+  -------------------------------------------------------- */
+
+
+
 }
