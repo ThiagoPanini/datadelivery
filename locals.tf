@@ -25,12 +25,6 @@ locals {
     "glue"   = "datadelivery-glue-assets-${local.account_id}-${local.region_name}"
   }
 
-  # Referencing a data folder where the files to be uploaded are located
-  # data_path = var.upload_module_data ? "${path.module}/data/" : var.custom_data_dir
-  # module_data_files = var.upload_module_data ? list(fileset("${path.module}/data/", "**")) : []
-  # custom_data_files = var.upload_custom_data ? list(fileset("${var.custom_data_dir}", "**")) : []
-  # all_data_files    = concat(local.module_data_files, local.custom_data_files)
-
   # Referencing a policies folder where the JSON files for policies are located
   iam_policies_path = "${path.module}/policy/"
 
@@ -39,29 +33,4 @@ locals {
 
   # Extracting current timestamp and adding a delay
   timestamp_to_run = timeadd(timestamp(), var.delay_to_run_crawler)
-
-
-  /* --------------------------------------------------------
-  ------------------ VALIDATING VARIABLES -------------------
-  -----------------------------------------------------------
-
-  According to discussions in the issue #25609 of the source
-  Terraform project (the official one), Terraform can't handle
-  variables validation using a condition that references multiple
-  variables.
-
-  It means that if users want to apply a validate condition
-  in a variable (e.g. "x") using information about another 
-  variable (e.g. "y"), the error below is thrown:
-
-  The condition for variable "x" can only refer to the variable
-  itself, using var.y.
-
-  Workarounds:
-  https://github.com/hashicorp/terraform/issues/25609,
-  https://github.com/hashicorp/terraform/issues/25609#issuecomment-1057614400
-  -------------------------------------------------------- */
-
-
-
 }

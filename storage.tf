@@ -37,21 +37,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
   }
 }
 
-/*
-# Adding local files on SoR bucket
-resource "aws_s3_object" "data_sources" {
-  for_each               = fileset(local.data_path, "**")
-  bucket                 = aws_s3_bucket.this["sor"].bucket
-  key                    = each.value
-  source                 = "${local.data_path}${each.value}"
-  server_side_encryption = "aws:kms"
-
-  depends_on = [
-    aws_s3_bucket.this
-  ]
-}
-*/
-
 # Uploading module data files into the SoR datadelivery bucket
 resource "aws_s3_object" "module_files" {
   for_each               = var.upload_module_data ? fileset("${path.module}/data/", "**") : []
