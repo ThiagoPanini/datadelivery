@@ -18,11 +18,12 @@ locals {
 
   # Creating a map with bucket names to be deployed
   bucket_names_map = {
-    "sor"    = "datadelivery-sor-data-${local.account_id}-${local.region_name}"
-    "sot"    = "datadelivery-sot-data-${local.account_id}-${local.region_name}"
-    "spec"   = "datadelivery-spec-data-${local.account_id}-${local.region_name}"
+    "sor"    = "datadelivery-sor-${local.account_id}-${local.region_name}"
+    "sot"    = "datadelivery-sot-${local.account_id}-${local.region_name}"
+    "spec"   = "datadelivery-spec-${local.account_id}-${local.region_name}"
     "athena" = "datadelivery-athena-query-results-${local.account_id}-${local.region_name}"
     "glue"   = "datadelivery-glue-assets-${local.account_id}-${local.region_name}"
+    "temp"   = "datadelivery-temp-${local.account_id}-${local.region_name}"
   }
 
   # Referencing a policies folder where the JSON files for policies are located

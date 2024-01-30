@@ -39,6 +39,7 @@ resource "aws_athena_workgroup" "analytics" {
 
 # Defining a Glue Crawler
 resource "aws_glue_crawler" "sor" {
+  count         = var.create_crawler ? 1 : 0
   database_name = var.glue_db_names["sor"]
   name          = "datadelivery-glue-crawler-sor"
   role          = local.glue_crawler_role_arn

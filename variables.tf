@@ -40,6 +40,12 @@ variable "flag_s3_block_public_access" {
 ---------------- VARIABLES: iam module ----------------
 -------------------------------------------------------- */
 
+variable "create_crawler" {
+  description = "Flag that enables the creation of a Glue Crawler that points to the SoR bucket"
+  type        = bool
+  default     = true
+}
+
 variable "create_crawler_role" {
   description = "Flag that configures the module to create a IAM role to be assumed by the Glue Crawler"
   type        = bool
