@@ -1,4 +1,4 @@
-# Informações principais do projeto
+# Main project info
 site_name: datadelivery
 site_url: https://datadelivery.readthedocs.io/en/latest/
 site_author: Thiago Panini
@@ -6,7 +6,7 @@ site_description : >-
   An open source Terraform module that is capable to provide a
   complete AWS infrastructure toolkit to be deployed in any AWS account.
 
-# Informações do repositório com o código fonte
+# Source repo
 repo_name: ThiagoPanini/datadelivery
 repo_url: https://github.com/ThiagoPanini/datadelivery
 
@@ -14,9 +14,9 @@ repo_url: https://github.com/ThiagoPanini/datadelivery
 copyright: |
   Copyright &copy; 2023-2024 <a href="https://github.com/ThiagoPanini"  target="_blank" rel="noopener">Thiago Panini</a>
 
-# Configurações extras da documentação
+# Extra config
 extra:
-  # Redes sociais no footer
+  # Social media on footer
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ThiagoPanini
@@ -31,7 +31,7 @@ extra:
   # Google Analytics
   analytics:
     provider: google
-    property: G-TSTKJMFJS3
+    property: G-117P7B79M6
     feedback:
       title: This page was helpful?
       ratings:
@@ -46,21 +46,21 @@ extra:
           note: >- 
             Thank you for your feedback!
 
-# Configuração do tema
+# Theme setup
 theme:
   name: material
 
-  # Diretório adicional para customização do tema
+  # Custom dir for theme customization
   custom_dir: docs/overrides
 
-  # Customizando ícone no header da página
+  # Customizing the icon on the page header
   icon:
     logo: custom/custom-icon-32px
   
-  # Customizando favicon (ícone da aba)
+  # Customizing favicon (brose header)
   favicon: assets/imgs/logo/logo-sem-nome.png
 
-  # Configurando paleta de cores
+  # Color palettes
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -77,7 +77,7 @@ theme:
         icon: material/weather-night
         name: Toque para modo claro
 
-  # Configurando features da documentação
+  # Documentation features
   features:
     - navigation.tabs
     - navigation.top
@@ -91,19 +91,26 @@ theme:
     - search.suggest
     - content.code.copy
 
-# Navegação
+# Navigation
 nav:
-  - Início:
-    - pynvest: index.md
-  
+  - Home:
+    - datadelivery: index.md
+    
   - Quickstart:
-    - Instalação: quickstart/instalacao.md
-    - Arquitetura: quickstart/arquitetura.md
-    - Design: quickstart/design.md
+    - Overview: quickstart/overview.md
+    - Getting Started:
+      - Calling the Module: quickstart/calling-the-module.md
+      - Module Variables: quickstart/variables.md
+      - Customizing the Module: quickstart/customizing-call.md
 
-  - Contribuindo: contribuindo/contribuindo.md
+  - Deep Dive:
+    - More About the Module: about/index.md
+    - Project Story: about/story.md
+    - Design: about/design.md
 
-# Configurando extensões
+  - Contributing: contribuindo/contribuindo.md
+
+# Extensions
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
