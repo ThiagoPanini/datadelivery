@@ -9,3 +9,8 @@ file handles the calls for the following modules:
 - [x] iam
 - [x] catalog
 -------------------------------------------------------- */
+
+# Criando recursos de armazenamento via módulo storage
+module "storage" {
+  source = "./infra/modules/storage"
+}

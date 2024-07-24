@@ -13,25 +13,25 @@ data "aws_region" "current" {}
 
 # Defining local variables to be used on the module
 locals {
-  account_id  = data.aws_caller_identity.current.account_id
-  region_name = data.aws_region.current.name
+  #account_id  = data.aws_caller_identity.current.account_id
+  #region_name = data.aws_region.current.name
 
   # Creating a map with bucket names to be deployed
-  bucket_names_map = {
-    "sor"    = "datadelivery-sor-${local.region_name}-${local.account_id}"
-    "sot"    = "datadelivery-sot-${local.region_name}-${local.account_id}"
-    "spec"   = "datadelivery-spec-${local.region_name}-${local.account_id}"
-    "athena" = "datadelivery-athena-query-results-${local.region_name}-${local.account_id}"
-    "glue"   = "datadelivery-glue-assets-${local.region_name}-${local.account_id}"
-    "temp"   = "datadelivery-temp-${local.region_name}-${local.account_id}"
-  }
+  #bucket_names_map = {
+  #  "sor"    = "datadelivery-sor-${local.region_name}-${local.account_id}"
+  #  "sot"    = "datadelivery-sot-${local.region_name}-${local.account_id}"
+  #  "spec"   = "datadelivery-spec-${local.region_name}-${local.account_id}"
+  #  "athena" = "datadelivery-athena-query-results-${local.region_name}-${local.account_id}"
+  #  "glue"   = "datadelivery-glue-assets-${local.region_name}-${local.account_id}"
+  #  "temp"   = "datadelivery-temp-${local.region_name}-${local.account_id}"
+  #}
 
   # Referencing a policies folder where the JSON files for policies are located
-  iam_policies_path = "${path.module}/policy/"
+  #iam_policies_path = "${path.module}/policy/"
 
   # If users want to create an IAM role for Glue Crawler, so this variable will consider the ARN of the given role. If not, this variable will hold the ARN string for an existing IAM role identified by its name
-  glue_crawler_role_arn = var.create_crawler_role ? aws_iam_role.glue_crawler_role[0].arn : "arn:aws:iam::${local.account_id}:role/${var.crawler_role_name}"
+  #glue_crawler_role_arn = var.create_crawler_role ? aws_iam_role.glue_crawler_role[0].arn : "arn:aws:iam::${local.account_id}:role/${var.crawler_role_name}"
 
   # Extracting current timestamp and adding a delay
-  timestamp_to_run = timeadd(timestamp(), var.delay_to_run_crawler)
+  #timestamp_to_run = timeadd(timestamp(), var.delay_to_run_crawler)
 }
