@@ -36,3 +36,16 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
     }
   }
 }
+
+# Realizando o upload de datasets públicos de exemplo
+resource "aws_s3_object" "module_public_datasets" {
+  for_each               = var.flag_upload_public_datasets ? fileset("${path.module}/data/", "**") : []
+  bucket                 = aws_s3_bucket.datadelivery_buckets[var.raw_data_key_on_bucket_names_map].bucket
+  key                    = each.value
+  source                 = "${path.module}/data/${each.value}"
+  server_side_encryption = "aws:kms"
+
+  depends_on = [
+    aws_s3_bucket.datadelivery_buckets
+  ]
+}

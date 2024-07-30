@@ -18,8 +18,20 @@ variable "bucket_names_map" {
   }
 }
 
+variable "raw_data_key_on_bucket_names_map" {
+  description = "Referência relacionada à chave do dicionário (map) da variável var.bucket_names_map do módulo utilizada para referenciar o bucket usado para armazenar dados brutos (sor, bronze, etc)."
+  type        = string
+  default     = "sor"
+}
+
 variable "flag_block_public_access_from_buckets" {
-  description = "Flag booleano para configurar o bloqueio de acesso público aos buckets criados pelo módulo. O valor 'True' indica o bloqueio do acesso público através do recurso Terraform `aws_s3_bucket_public_access_block`"
+  description = "Flag booleano para configurar o bloqueio de acesso público aos buckets criados pelo módulo. O valor 'True' indica o bloqueio do acesso público através do recurso Terraform `aws_s3_bucket_public_access_block`."
+  type        = bool
+  default     = true
+}
+
+variable "flag_upload_public_datasets" {
+  description = "Flag que habilita o upload automático de datasets públicos previamente presentes e disponibilizados na estrutura interna do módulo."
   type        = bool
   default     = true
 }
