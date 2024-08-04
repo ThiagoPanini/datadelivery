@@ -49,3 +49,10 @@ resource "aws_s3_object" "module_public_datasets" {
     aws_s3_bucket.datadelivery_buckets
   ]
 }
+
+/* ToDos
+  - Apagar este comentário
+  - Iniciar módulo iam
+  - Validar possibilidade de incluir templates para melhorar policy
+  - Criar policy e role para crawler do Glue
+*/
