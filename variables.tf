@@ -52,3 +52,55 @@ variable "flag_create_glue_crawler" {
   type        = bool
   default     = true
 }
+
+
+/* -------------------------------------------------------
+    VARIABLES: catalog
+    Variáveis aceitas pelo módulo catalog
+------------------------------------------------------- */
+
+variable "flag_create_glue_databases" {
+  description = "Flag booleano para habilitar a criação de databases no Glue Data Catalog para armazenar os resultados do processo de execução do Glue Crawler."
+  type        = bool
+  default     = true
+}
+
+variable "glue_databases_names_map" {
+  description = "Dicionário de definição de todos os nomes de databases a serem criados na conta AWS alvo. Este dicionário deve possuir chaves identificadoras (ex: 'sor', 'sot', 'spec') cujos valores representam os nomes para os databases a serem criados para cada contexto identificador. É obrigatório que exista, pelo menos, uma chave que identifique um nome de dadatabase para armazenar dados brutos (ex: 'sor' ou 'bronze'). Outros identificadores de chave e nome de bucket são opcionais (ex: 'sot', 'spec', 'silver', 'gold')."
+  type        = map(string)
+  default = {
+    "sor"  = "db_datadelivery_sor"
+    "sot"  = "db_datadelivery_sot"
+    "spec" = "db_datadelivery_spec"
+  }
+}
+
+variable "raw_data_key_on_databases_names_map" {
+  description = "Referência relacionada à chave do dicionário (map) da variável var.glue_databases_names_map do módulo utilizada para referenciar o database usado para armazenar dados brutos (sor, bronze, etc)."
+  type        = string
+  default     = "sor"
+}
+
+variable "delay_to_run_crawler" {
+  description = "Referência de tempo em segundos (s), minutos (m) ou horas (h) representando o delay para execução do Glue Crawler após a execução do módulo e implantação dos recursos. Por exemplo, var.delay_to_run_crawler = '2m' indica que o Glue Crawler será executado 2 minutos após a implantação dos recursos do módulo datadelivery."
+  type        = string
+  default     = "2m"
+}
+
+variable "flag_create_athena_workgroup" {
+  description = "Flag booleano para habilitar a criação de um workgroup pré configurado do Athena para permitir a execução de consultas."
+  type        = bool
+  default     = false
+}
+
+variable "athena_workgroup_name" {
+  description = "Nome para workgroup do Athena criado pelo módulo datadelivery"
+  type        = string
+  default     = "datadelivery-workgroup"
+}
+
+variable "athena_output_key_on_bucket_names_map" {
+  description = "Referência relacionada à chave do dicionário (map) da variável var.bucket_names_map do módulo utilizada para referenciar o bucket usado para armazenar resultados de queries do Athena. Para criação de um workgroup do Athena pelo módulo datadelivery, espera-se que o usuário defina também a criação de um bucket S3 específico para este propósito."
+  type        = string
+  default     = "athena"
+}
