@@ -2,7 +2,7 @@
 ARQUIVO: data.tf @ storage module
 
 Arquivo criado para centralizar todas as definições de
-data sources do Terraform definidos para facilitar a
+data sources do Terraform criados para facilitar a
 declaração e configuração de recursos ao longo do módulo
 -------------------------------------------------------- */
 
