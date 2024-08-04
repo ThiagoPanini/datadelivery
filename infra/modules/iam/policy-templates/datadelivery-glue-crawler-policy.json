@@ -8,7 +8,7 @@
                 "s3:GetObject",
                 "s3:PutObject"
             ],
-            "Resource": "arn:aws:s3:::${sor_bucket_name}"
+            "Resource": "arn:aws:s3:::${sor_bucket_name}/*"
         }
     ]
 }
