@@ -50,9 +50,15 @@ resource "aws_s3_object" "module_public_datasets" {
   ]
 }
 
-/* ToDos
-  - Apagar este comentário
-  - Iniciar módulo iam
-  - Validar possibilidade de incluir templates para melhorar policy
-  - Criar policy e role para crawler do Glue
-*/
+# Realizando o upload de datasets próprios fornecidos pelo usuário
+resource "aws_s3_object" "user_custom_datasets" {
+  for_each               = var.flag_upload_custom_datasets ? fileset(var.custom_dataset_dir, "**") : []
+  bucket                 = aws_s3_bucket.datadelivery_buckets[var.raw_data_key_on_bucket_names_map].bucket
+  key                    = each.value
+  source                 = "${var.custom_dataset_dir}${each.value}"
+  server_side_encryption = "aws:kms"
+
+  depends_on = [
+    aws_s3_bucket.datadelivery_buckets
+  ]
+}

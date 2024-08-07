@@ -18,6 +18,8 @@ module "storage" {
   raw_data_key_on_bucket_names_map      = var.raw_data_key_on_bucket_names_map
   flag_block_public_access_from_buckets = var.flag_block_public_access_from_buckets
   flag_upload_public_datasets           = var.flag_upload_public_datasets
+  flag_upload_custom_datasets           = var.flag_upload_custom_datasets
+  custom_dataset_dir                    = var.custom_dataset_dir
 }
 
 # Criando recursos de gerenciamento de permissões via módulo iam

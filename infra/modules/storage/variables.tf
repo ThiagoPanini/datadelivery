@@ -25,3 +25,12 @@ variable "flag_upload_public_datasets" {
   type        = bool
 }
 
+variable "flag_upload_custom_datasets" {
+  description = "Flag que habilita o upload de datasets customizados fornecidos pelo próprio usuário no bucket criado pelo módulo datadelivery para o armazenamento de dados brutos (sor, bronze, etc). Se var.flag_upload_custom_datasets=true, então o usuário deve fornecer um caminho de diretório onde os dados estão armazenados através da variável var.custom_datasets_dir."
+  type        = bool
+}
+
+variable "custom_dataset_dir" {
+  description = "Diretório onde os arquivos dos datasets do usuário estão armazenados para que estes sejam coletados e enviados para o bucket de armazenamento de dados brutos no S3. É obrigatório que o usuário forneça um valor para esta variável caso var.flag_upload_custom_datasets=true."
+  type        = string
+}
