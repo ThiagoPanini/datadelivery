@@ -55,7 +55,7 @@ resource "aws_s3_object" "user_custom_datasets" {
   for_each               = var.flag_upload_custom_datasets ? fileset(var.custom_dataset_dir, "**") : []
   bucket                 = aws_s3_bucket.datadelivery_buckets[var.raw_data_key_on_bucket_names_map].bucket
   key                    = each.value
-  source                 = "${var.custom_dataset_dir}${each.value}"
+  source                 = "${var.custom_dataset_dir}/${each.value}"
   server_side_encryption = "aws:kms"
 
   depends_on = [
