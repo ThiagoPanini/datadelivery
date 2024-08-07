@@ -22,8 +22,6 @@ locals {
       : "${bucket_name}-${local.account_id}-${local.region_name}"
     )
   }
-
-
 }
 
 
