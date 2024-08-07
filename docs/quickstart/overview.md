@@ -1,7 +1,7 @@
-# datadelivery: A Data Exploration Toolkit
+# Toolkit de Exploração de Dados na AWS
 
 <div align="center">
-    <br><img src="https://github.com/ThiagoPanini/datadelivery/blob/v0.2.x/docs/assets/imgs/logo/logo-com-nome.png?raw=true" width=280 alt="datadelivery-logo">
+    <br><img src="https://github.com/ThiagoPanini/datadelivery/blob/v1.0.x/docs/_assets/imgs/logo/logo-com-nome.png?raw=true" width=280 alt="datadelivery-logo">
 </div>
 
 <div align="center">

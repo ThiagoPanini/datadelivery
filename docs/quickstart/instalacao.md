@@ -1,7 +1,7 @@
 # Facilitando a Extração de Indicadores
 
 <div align="center">
-    <br><img src="https://github.com/ThiagoPanini/pynvest/blob/v0.1.x/docs/assets/imgs/logo/logo-com-nome.png?raw=true" width=200 alt="pynvest-logo">
+    <br><img src="https://github.com/ThiagoPanini/pynvest/blob/v1.0.x/docs/assets/imgs/logo/logo-com-nome.png?raw=true" width=200 alt="datadelivery-logo">
 </div>
 
 <div align="center">

@@ -1,12 +1,13 @@
-# Main project info
+# Informações principais do projeto
 site_name: datadelivery
 site_url: https://datadelivery.readthedocs.io/en/latest/
 site_author: Thiago Panini
 site_description : >-
-  An open source Terraform module that is capable to provide a
-  complete AWS infrastructure toolkit to be deployed in any AWS account.
+  Um módulo Terraform open source capaz de proporcionar um toolkit
+  completo de infraestrutura para que usuários iniciem suas
+  respectivas jornadas de exploração em serviços de Analytics na AWS.
 
-# Source repo
+# Informações do repositório com o código fonte
 repo_name: ThiagoPanini/datadelivery
 repo_url: https://github.com/ThiagoPanini/datadelivery
 
@@ -14,9 +15,9 @@ repo_url: https://github.com/ThiagoPanini/datadelivery
 copyright: |
   Copyright &copy; 2023-2024 <a href="https://github.com/ThiagoPanini"  target="_blank" rel="noopener">Thiago Panini</a>
 
-# Extra config
+# Configurações extras da documentação
 extra:
-  # Social media on footer
+  # Redes sociais no footer
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ThiagoPanini
@@ -33,34 +34,34 @@ extra:
     provider: google
     property: G-117P7B79M6
     feedback:
-      title: This page was helpful?
+      title: Esta página foi útil?
       ratings:
         - icon: material/thumb-up-outline
           name: Yes, awesome!
           data: 1
           note: >-
-            Thank you for your feedback!
+            Obrigado pelo seu feedback!
         - icon: material/thumb-down-outline
           name: No, it needs improvements!
           data: 0
           note: >- 
-            Thank you for your feedback!
+            Obrigado pelo seu feedback!
 
-# Theme setup
+# Configuração do tema
 theme:
   name: material
 
-  # Custom dir for theme customization
+  # Diretório adicional para customização do tema
   custom_dir: docs/overrides
 
-  # Customizing the icon on the page header
+  # Customizando ícone no header da página
   icon:
     logo: custom/custom-icon-32px
   
-  # Customizing favicon (brose header)
+  # Customizando favicon (ícone da aba)
   favicon: assets/imgs/logo/logo-sem-nome.png
 
-  # Color palettes
+  # Configurando paleta de cores
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -77,7 +78,7 @@ theme:
         icon: material/weather-night
         name: Toque para modo claro
 
-  # Documentation features
+  # Configurando features da documentação
   features:
     - navigation.tabs
     - navigation.top
@@ -91,7 +92,7 @@ theme:
     - search.suggest
     - content.code.copy
 
-# Navigation
+# Navegação
 nav:
   - Home:
     - datadelivery: index.md
@@ -110,7 +111,7 @@ nav:
 
   - Contributing: contribuindo/contribuindo.md
 
-# Extensions
+# Configurando extensões
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
