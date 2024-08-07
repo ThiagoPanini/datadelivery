@@ -1,21 +1,13 @@
 /* --------------------------------------------------------
 FILE: main.tf @ root module
 
-Main Terraform file where all submodules are called in
-order to deploy the infrastructure provided as code. This
-file handles the calls for the following modules:
+Arquivo principal do projeto Terraform no módulo root
+responsável por chamar todos os demais submódulos do
+projeto, entre eles:
 
-- [x] storage
-- [x] iam
-- [ ] catalog
-
-ToDos:
-- [ ] Iniciar módulo catalog
-- [ ] Gerar output para expor ARN de role IAM para Glue Crawler
-- [ ] Criar databases
-- [ ] Criar Glue Crawler
-- [ ] Criar agendamento automático de Glue Crawler via cron
-- [ ] Atualizar documentação completa do projeto
+- Módulo storage
+- Módulo iam
+- Módulo catalog
 -------------------------------------------------------- */
 
 # Criando recursos de armazenamento de dados físicos no S3 via módulo storage
