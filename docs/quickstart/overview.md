@@ -24,35 +24,37 @@
 
 </div>
 
-## Overview
+## Visão Geral
 
-The `datadelivery` solution is an open source [Terraform](https://www.terraform.io/) that provides an infrastructure toolkit to be deployed in any AWS account in order to help users to start **exploring data**. It does that by:
+O `datadelivery` é um módulo [Terraform](https://www.terraform.io/) que permite com que seus usuários criem recursos de infraestrutura em suas respectivas contas AWS visando aprimorar os primeiros passos na **exploração de dados** utilizando serviços de Analytics. Isto é feito através de processos como:
 
-- 🪣 Deploying AWS S3 buckets into the user account following the [data mesh architecture](https://www.datamesh-architecture.com/)
-- 🎲 Uploading some public datasets into the raw data S3 bucket
-- ⏳ Scheduling a Glue crawler to catalog raw files into tables
-- 🔒 Providing a preconfigured IAM policy and role to run the crawler
-- 📈 Creating an Athena workgroup to run SQL queries
+- 🪣 Criação de buckets S3 seguindo uma [arquitetura Data Mesh](https://www.datamesh-architecture.com/) ou [arquitetura medalhão](https://medium.com/@junshan0/medallion-architecture-what-why-and-how-ce07421ef06f)
+- 🎲 Upload automático de datasets públicos em bucket S3
+- 📦 Upload opcional de datasets customizados fornecidos pelo usuário
+- ⏳ Agendamento automático de um Glue Crawler para criação de tabelas para os datasets
+- 🔒 Criação de *policies* e *roles* IAM para execução do Glue Crawler
+- 📈 Criação de um *workgroup* do Athena para facilitar a execução de *queries*
 
 <small>
   :octicons-tools-16:
-  **A fully disposable environment!** As a Terraform module, all AWS resources provided by `datadelivery` can be deployed on a single command call (`terraform apply`). On the same way, the environment can be turned off and all resources can be destroyed whenever users want (`terraform destroy`).
+  **Um ambiente de bolso!** Como um módulo Terraform, todos os recursos proporcionados pelo `datadelivery` podem ser implantados através de um **único comando** (`terraform apply`). Da mesma forma, os usuários podem simplesmente eliminar todos estes recursos sempre que quiserem também com um **único comando** (`terraform destroy`).
 </small>
 
-## Before the Beginning
+## Pré Requisitos
 
+Para utilizar o `datadelivery`, usuários precisam:
 In order to start using `datadelivery`, users will need:
 
-- ☁️ An [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) available for use
-- 🔑 [Programatic access](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) on the account with an `access_key_id` and a `secret_access_key`
-- ⛏ [Terraform](https://www.terraform.io/) installed (version >=1.0)
+- ☁️ Ter uma [conta AWS](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) disponível para uso
+- 🔑 [Acesso programático](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) nessa conta AWS via chaves `access_key_id` e `secret_access_key`
+- ⛏ [Terraform](https://www.terraform.io/) instalado
 
-## Calling the Module
+## Chamando o Módulo
 
-With the environment already setup, users can simply create a `main.tf` Terraform file and call the module as:
+Com o ambiente preparado, usuários podem criar um arquivo Terraform de extensão `.tf` e chamar o módulo `datadelivery` no seguinte formato:
 
 ```python
-# Calling datadelivery module with default configuration
+# Chamando o módulo datadelivery com as configurações padrão
 module "datadelivery" {
   source = "git::https://github.com/ThiagoPanini/datadelivery"
 }
@@ -60,10 +62,10 @@ module "datadelivery" {
 
 <small>
   :octicons-light-bulb-16:
-  **Hint:** if you have any doubt about how to setup a Terraform project, check the block below to see some demos on running Terraform commands in order to deploy `datadelivery` AWS resources.
+  **Dica:** se você tem dúvidas sobre como configurar um projeto Terraform para a chamada de módulos, expanda o bloco abaixo para visualizar demonstrações práticas em um passo a passo completo utilizando o módulo `datadelivery`.
 </small>
 
-??? tip "Setting up a basic Terraform project"
+??? tip "Configuração básica de um projeto Terraform (passo a passo datadelivery)"
     For those who have never worked with Terraform and need a guideline, in the following steps we will:
 
     1. Create a simple Terraform project (a `main.tf` file)

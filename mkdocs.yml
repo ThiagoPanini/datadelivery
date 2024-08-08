@@ -52,14 +52,14 @@ theme:
   name: material
 
   # Diretório adicional para customização do tema
-  custom_dir: docs/overrides
+  custom_dir: docs/_overrides
 
   # Customizando ícone no header da página
   icon:
     logo: custom/custom-icon-32px
   
   # Customizando favicon (ícone da aba)
-  favicon: assets/imgs/logo/logo-sem-nome.png
+  favicon: _assets/imgs/logo/logo-sem-nome.png
 
   # Configurando paleta de cores
   palette:
