@@ -99,17 +99,13 @@ nav:
     
   - Quickstart:
     - Overview: quickstart/overview.md
-    - Getting Started:
-      - Calling the Module: quickstart/calling-the-module.md
-      - Module Variables: quickstart/variables.md
-      - Customizing the Module: quickstart/customizing-call.md
+    - Variáveis do Módulo: quickstart/variaveis.md
+    - Detalhes Adicionais:
+      - Arquitetura: quickstart/arquitetura.md
+      - Design: quickstart/design.md
+      - História da Iniciativa: quickstart/historia.md
 
-  - Deep Dive:
-    - More About the Module: about/index.md
-    - Project Story: about/story.md
-    - Design: about/design.md
-
-  - Contributing: contribuindo/contribuindo.md
+  - Contribuindo: contribuindo/contribuindo.md
 
 # Configurando extensões
 markdown_extensions:

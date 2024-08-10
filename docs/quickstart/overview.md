@@ -26,7 +26,7 @@
 
 ## Visão Geral
 
-O `datadelivery` é um módulo [Terraform](https://www.terraform.io/) que permite com que seus usuários criem recursos de infraestrutura em suas respectivas contas AWS visando aprimorar os primeiros passos na **exploração de dados** utilizando serviços de Analytics. Isto é feito através de processos como:
+O `datadelivery` é um módulo [Terraform](https://www.terraform.io/) que permite com que seus usuários criem recursos de infraestrutura em suas respectivas contas AWS visando aprimorar os primeiros passos na **exploração de dados** utilizando serviços de Analytics. Isto é feito através de processos já embarcados no módulo, tais como:
 
 - 🪣 Criação de buckets S3 seguindo uma [arquitetura Data Mesh](https://www.datamesh-architecture.com/) ou [arquitetura medalhão](https://medium.com/@junshan0/medallion-architecture-what-why-and-how-ce07421ef06f)
 - 🎲 Upload automático de datasets públicos em bucket S3
@@ -66,46 +66,48 @@ module "datadelivery" {
 </small>
 
 ??? tip "Configuração básica de um projeto Terraform (passo a passo datadelivery)"
-    For those who have never worked with Terraform and need a guideline, in the following steps we will:
+    Para quem possui pouca experiência com o Terraform e precisa de um guia detalhado sobre como utilizar o módulo `datadelivery` na prática, o processo poderia ser resumido nos seguintes passos:
 
-    1. Create a simple Terraform project (a `main.tf` file)
-    2. Call the `datadelivery` module
-    3. Initialize the module with `terraform init`
-    4. See the deployment plan with `terraform plan`
-    5. Deploy the resources with `terraform apply`
+    1. Criação de um diretório para organizar seu projeto Terraform
+    2. Criação de um arquivo Terraform neste diretório (ex: arquivo `main.tf`)
+    3. Escrever o código Terraform neste arquivo para chamar o módulo `datadelivery` (ver [código acima](#chamando-o-módulo))
+    4. Usando um terminal ou uma IDE, execute o comando `terraform init` para inicializar os módulos chamados
+    5. Para visualizar os recursos a serem criados em sua conta AWS, execute o comando `terraform plan`
+    6. Por fim, para implantar os recursos, execute o comando `terraform apply`
 
-    A [Terraform module](https://developer.hashicorp.com/terraform/language/modules) can be called from a different set of [sources](https://developer.hashicorp.com/terraform/language/modules/sources) in any Terraform project.
+    Um [módulo Terraform](https://developer.hashicorp.com/terraform/language/modules) pode ser chamado através de uma série de [origens](https://developer.hashicorp.com/terraform/language/modules/sources) em qualquer projeto Terraform.
 
-    A Terraform project can be anything you put in Terraform files in your workspace. Terraform files are simply files with `.tf` extension. So, with that in mind, let's create a file called `main.tf` to hold our Terraform code.
+    Um projeto Terraform pode ser qualquer diretório que possua arquivos Terraform e que, nada mais são, do que arquivos de extensão `.tf` onde os recursos de infraestrutura são configurados através de uma [linguagem declarativa](https://en.wikipedia.org/wiki/Declarative_programming) chamada [HCL](https://developer.hashicorp.com/terraform/language) (*Hashicorp Configuration Language*).
 
-    ??? example "Creating a Terraform project"
-        ![Creating a main.tf in a Terraform project](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-quickstart-01-maintf.gif?raw=true)
+    Assim, vamos estruturar este passo a passo criando um arquivo Terraform chamado `main.tf` para armazenar nosso código Terraform.
 
-    Once we have the Terraform project (at least one `.tf` file) in our workspace, let's show how a Terraform module can be called. It needs at least a source and [module sources](https://developer.hashicorp.com/terraform/language/modules/sources) local paths, HTTP URLs, GitHub repos, S3 buckets and many others.
+    ??? example "Criando um projeto Terraform"
+        ![Criando arquivo main.tf em um projeto Terraform](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/_assets/gifs/datadelivery-quickstart-01-maintf.gif?raw=true)
 
-    The `datadelivery` module is hosted by a GitHub repository, so let's declare the module call inside our `main.tf` file.
-
-    ??? example "Calling the datadelivery module from GitHub"
-        ![Declaring the Terraform module block to call datadelivery source module from GitHub](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-quickstart-02-module.gif?raw=true)
-
-    So now we can start executing Terraform commands in order to get the `datadelivery` module resources deployed in (your) the AWS target account. The first command works as a kind of a "press start button" and it helps users to get all the module logic in their workspace. We are talking about the `terraform init` command. Let's see how it works.
-
-    ??? example "Initializing the module with terraform init"
-        ![Initializing the module with terraform init](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-quickstart-03-init.gif?raw=true)
-
-    After that, we can see exactly which AWS resources will be deployed, changed or even destroyed. It's the `terraform plan` command that can give us the visualization of the deployment plan.
-
-    ??? example "Planning the deploy with terraform deploy"
-        ![Planning the deploy with terraform deploy](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-quickstart-04-plan.gif?raw=true)
-
-    And finally, after we initialized the module and checked the deployment plan, we can follow on with the deployment using the `terraform apply` command.
+    Uma vez criado o projeto Terraform (isto é, pelo menos um arquivo `.tf` em um diretório qualquer), podemos declarar os recursos a serem implantados. Neste caso, os recursos estão encapsulados em um módulo Terraform. A chamada de módulos exige, essencialmente, apontar para a [origem](https://developer.hashicorp.com/terraform/language/modules/sources) onde o código fonte do módulo está armazenado e isto pode ser diretórios locais, URLs HTTP, repositórios no GitHub, buckets no S3 e muitos outros.
     
-    ??? example "Deploying infrastructure with terraform apply"
-        ![Deploying infrastructure with terraform apply](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/assets/gifs/datadelivery-quickstart-05-apply.gif?raw=true)
+    O código fonte do módulo `datadelivery` está hospedado em um repositório no GitHub e, dessa forma, sua chamada pode ser realizada conforme o exemplo abaixo:
+
+    ??? example "Chamando o módulo datadelivery"
+        ![Declarando um bloco de chamada de módulo para implantar os recursos encapsulados no módulo datadelivery](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/_assets/gifs/datadelivery-quickstart-02-module.gif?raw=true)
+
+    E assim, podemos executar os comandos Terraform para obter os recursos encapsulados no módulo `datadelivery` na conta AWS alvo. O primeiro desses comandos atua como uma espécie de "aperte play para continuar" e auxilia os usuários a obterem toda a lógica do módulo em seu diretório/workspace de trabalho. Trata-se do `terraform init` e veremos como ele funciona no exemplo abaixo:
+
+    ??? example "Inicializando o módulo com terraform init"
+        ![Inicializando o módulo com terraform init](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/_assets/gifs/datadelivery-quickstart-03-init.gif?raw=true)
+
+    Após isso, nós podemos verificar exatamente quais recursos AWS serão criados, alterados ou até mesmo eliminados através da chamada deste módulo. O comando para ter essa visão é o `terraform plan` e seu retorno é um verdadeiro plano de implantação do Terraform no *provider* alvo.
+
+    ??? example "Planejamento a implantação com terraform plan"
+        ![Planejamento a implantação com terraform plan](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/_assets/gifs/datadelivery-quickstart-04-plan.gif?raw=true)
+
+    Por fim, após inicializar o módulo e validar o plano de implantação, podemos seguir, de fato, com a implantação através do comando `terraform apply`.
+
+    ??? example "Implantando os recursos com terraform apply"
+        ![Implantando os recursos com terraform apply](https://github.com/ThiagoPanini/datadelivery/blob/main/docs/_assets/gifs/datadelivery-quickstart-05-apply.gif?raw=true)
     
-    And that's how you can create Terraform project and call Terraform modules in any workspace.
+    E é assim que podemos criar um projeto Terraform e chamar módulos em qualquer ambiente de trabalho. No caso do `datadelivery`, o usuário poderá, após sua implantação, navegar até sua conta AWS e verificar os recursos criados para facilitar a jornada de exploração de dados com serviços de Analytics, tais como buckets no S3, tabelas no Glue Data Catalog, entre outros.
 
+## Variáveis do Módulo 
 
-## Variables 
-
-The `datadelivery` Terraform module provides variables that can be set up in order to customize some of its behaviors. Users can follow along the [variables](./variables.md) page to understand what kind of customizations can be made.
+O módulo `datadelivery` possui variáveis que podem ser configuradas pelos usuários para personalizar os recursos a serem implantados na conta AWS alvo. Para visualizar quais variáveis são aceitas e suas respectivas descrições, navegue até a página de [variáveis](./variables.md) desta documentação.
