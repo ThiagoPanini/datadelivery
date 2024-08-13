@@ -2,4 +2,7 @@ mkdocs
 pymdown-extensions
 mkdocs-material
 mkdocstrings[python]
-mkdocs-video
+mkdocs-drawio-file
+mkdocs-glightbox
+mkdocs-git-committers-plugin-2
+mkdocs-git-revision-date-localized-plugin
