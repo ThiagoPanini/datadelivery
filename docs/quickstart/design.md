@@ -27,8 +27,8 @@ A imagem na [home](../index.md) da documentação foi criada utilizando a ilustr
 
 ## Fontes
 
-- [Matura MT Script Capitals](https://www.cdnfonts.com/matura-mt-script-capitals.font) para o título (pynvest)
-- [Segoe UI Light](https://www.fonts100.com/font+89949_Segoe+UI+Light.html) para o substítulo (python package)
+- [Matura MT Script Capitals](https://www.cdnfonts.com/matura-mt-script-capitals.font) para o título (datadelivery)
+- [Segoe UI Light](https://www.fonts100.com/font+89949_Segoe+UI+Light.html) para o substítulo (terraform module)
 
 ## Cores
 
